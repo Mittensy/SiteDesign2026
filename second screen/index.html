@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Прокат камер</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet"
+  />
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <a href="/first screen/index.html" class="logo" aria-label="Главная">
+        <img src="logo.svg" alt="Логотип" />
+      </a>
+
+      <button class="burger-btn" type="button" aria-label="Открыть меню" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav">
+        <ul>
+          <li><a href="/fourth screen/index.html">Локации</a></li>
+          <li><a href="/second screen/index.html">Ассортимент</a></li>
+          <li><a href="/third screen/index.html">Обработка</a></li>
+          <li><a class="js-profile-open" href="/fifth screen/index.html">Личный кабинет</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Главный экран -->
+     <section class="hero">
+  <img class="hero-bg" src="mainBG.svg" alt="" />
+
+  <div class="container hero-inner">
+    <div class="hero-image">
+      <pre class="hero-ascii hero-ascii-left" aria-hidden="true">
+⠀⠀⠀⠀⠀⣠⣤⡦⣤⣬⣍⡉⠒⢤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⣠⠒⠉⠁⠀⠀⠀⠀⠈⠙⠻⣦⣜⠳⣄⢀⣀⣀⣠⣄⣀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣴⡿⠶⣦⡀⠀⠀⠀⠀⠀⠀⠀
+⠀⡜⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢈⢿⡖⠛⣯⠀⠀⣀⣀⣀⣀⡀⠈⠉⠓⠒⠠⠤⣀⣀⠀⠀⠀⠀⠻⠇⠀⢸⡽⠀⠀⠀⠀⠀⠀⠀
+⣼⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠞⠃⣤⣽⣶⠾⣿⠉⠉⠉⠉⠉⠉⠙⠓⢤⡀⠀⠀⠀⠉⠙⠒⠶⢤⣤⣤⡴⠋⠁⠀⠀⠀⠀⠀⠀⠀
+⢿⠀⠀⠀⠀⠀⠀⠀⠀⡠⠊⣠⣶⣿⠋⠉⣏⠀⢹⡀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠣⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠘⣆⢀⣤⡀⠀⠀⠀⡼⢥⣶⠿⠙⠀⠀⠀⡇⠀⢸⡇⠀⠀⠀⠀⢠⣦⣤⠀⠀⠀⢹⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠈⠻⣿⡟⠀⠀⣾⣽⡿⠏⠁⠀⠀⠀⡸⠁⠀⣾⠀⠀⠀⠀⠀⢯⠙⠃⠀⠀⠀⣸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⣑⣿⡟⠃⠀⠀⠀⠀⡴⠁⠀⣰⠏⠃⠀⠀⠀⠀⠘⢦⣄⣀⣠⡴⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⢀⠀⢀⣾⠟⠐⢲⡷⠶⢶⡞⠁⠀⣴⠟⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⢰⢿⡿⣾⡏⠀⠀⠀⠁⢰⠏⠀⢀⡾⡉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠸⣌⢠⡿⠄⠀⢀⣠⡶⠁⠀⡰⠏⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠈⣿⡟⠛⠋⢡⠞⠀⣠⠞⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⢠⡟⠀⠀⢠⠃⠀⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⢸⠇⠀⠀⡏⠀⠀⠀⠀⣴⣗⠲⢤⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⣼⠀⠀⢸⡇⠀⠀⠀⠈⠛⠿⠃⠘⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⣧⠀⠀⠀⢷⡀⠀⠀⠀⠀⠀⢀⡼⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⢸⠀⠀⠀⠈⠻⢶⣤⣤⣤⠶⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠸⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠘⣆⠀⠀⣰⣦⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠉⠳⢤⣽⡿⠙⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+      </pre>
+
+      <img src="mainGirl.svg" alt="Главная фотография" />
+    </div>
+
+    <div class="hero-content">
+      <h1>Прокат камер</h1>
+      <p>
+        У нас вы можете выбрать все для фотосессии, мероприятия или творческого проекта,
+        получив все необходимое для работы.
+      </p>
+      <button type="button"><span>Связаться</span></button>
+
+      <pre class="hero-ascii hero-ascii-right" aria-hidden="true">
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡠⠄⠒⠂⠀⠐⠒⠢⠤⣀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡔⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠑⠢⡀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡌⠀⠀⠠⠀⠀⠀⢄⣀⣤⣶⡶⣶⣦⣤⣈⢆⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⠁⠀⠀⠀⠀⠀⣴⠟⠋⠀⠀⠀⠀⠀⠈⠛⢿⣧⡀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢃⠀⠀⠀⢀⣾⠋⠀⠆⠀⠀⠀⠀⠀⠀⠀⠀⠙⣿⣄⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠓⠄⣀⣸⣇⠀⠊⠀⠀⠀⠀⠒⢄⠀⠀⠀⠀⡟⣿⡆
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⡆⠀⠀⠀⡇⢹⡇
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡀⠀⠀⠀⠀⠀⡔⠊⠉⠉⠒⣄⠀⠻⣄⠀⠀⠀⠀⠀⠀⢠⠃⠀⠀⡰⠁⣼⡇
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣦⢹⠇⣴⣾⠇⠀⢸⠀⠀⠰⣦⠀⠈⡆⠀⠉⠳⠤⡤⠤⠤⠖⠁⠀⠀⡐⠁⢀⣿⠃
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡾⢃⠁⣚⣭⣤⡀⠀⠀⠳⢤⡴⠟⠀⢀⠇⢀⣀⣰⣾⣶⠀⠀⠀⢀⡠⠊⠀⣠⣿⠋⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⡆⠀⣀⠰⠂⠓⠉⠉⠉⠉⠁⠀⠀⠀⠀⣀⠀⣴⡋⣠⣿⣿⡿⠟⠉⢀⠠⠂⠁⢀⣠⣾⠟⠁⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣷⣿⡿⠏⠒⣉⣤⣤⣤⣶⣶⣦⣭⣭⣭⣭⣉⣁⣀⣒⣛⣛⣛⡉⣭⣀⣀⣂⣉⣤⣤⣶⡾⠟⠋⠁⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢀⣴⣿⡿⢛⣩⡴⠾⠛⢉⡉⠭⠬⠥⠭⠬⠥⣉⣉⡉⠉⠉⠛⠛⠛⠻⠿⢿⣿⣿⣿⣿⣿⣿⣿⣶⣦⣤⡀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⢠⣾⠟⣩⡶⠛⣁⣤⣴⣮⣯⣴⣤⣬⣍⠂⢤⡀⢠⣀⠉⣙⣓⠦⣄⡀⠀⠀⠀⠈⠙⢿⣿⠙⣿⣿⣿⣿⣿⣿⡆⠀⠀⠀⠀
+⠀⠀⠀⠀⣰⡿⣩⡾⠋⣠⡾⠛⠉⠁⠀⠀⠀⠀⠈⠙⢿⣦⡈⢦⠙⣿⣮⡛⠀⠀⠙⢶⡀⠀⠀⠀⠀⠀⠀⠈⠉⠀⠙⠿⠛⠀⠀⠀⠀⠀
+⠀⠀⠀⣰⢟⡴⠋⣠⠞⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⣿⡄⢳⠀⠇⠰⣦⠀⠹⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⣰⣿⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢣⠀⠀⠙⣿⣿⠀⡾⢃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⢳⠸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠑⠤⢀⠠⠊⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+      </pre>
+    </div>
+  </div>
+</section>
+
+    <!-- Популярные модели -->
+    <section class="popular-models" id="models">
+      <div class="container">
+        <h2>Популярные модели</h2>
+
+        <div class="models-slider-wrap">
+          <div class="swiper models-slider">
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide">
+                <article class="model-card">
+                  <header class="card-header">
+                    <h4>CANON EOS 5D</h4>
+                    <div class="window-controls">
+                      <button type="button" class="win95-btn minimize" aria-label="Свернуть"></button>
+                      <button type="button" class="win95-btn maximize" aria-label="Развернуть"></button>
+                      <button type="button" class="win95-btn close" aria-label="Закрыть"></button>
+                    </div>
+                  </header>
+
+                  <div class="card-image">
+                    <img src="leftcamera.svg" alt="Canon EOS 5D" />
+                  </div>
+
+                  <button type="button" class="model-more-btn">Подробнее</button>
+                </article>
+              </div>
+
+              <div class="swiper-slide">
+                <article class="model-card">
+                  <header class="card-header">
+                    <h4>CANON EOS M10</h4>
+                    <div class="window-controls">
+                      <button type="button" class="win95-btn minimize" aria-label="Свернуть"></button>
+                      <button type="button" class="win95-btn maximize" aria-label="Развернуть"></button>
+                      <button type="button" class="win95-btn close" aria-label="Закрыть"></button>
+                    </div>
+                  </header>
+
+                  <div class="card-image">
+                    <img src="maincamera.svg" alt="Canon EOS M10" />
+                  </div>
+
+                  <button type="button" class="model-more-btn">Подробнее</button>
+                </article>
+              </div>
+
+              <div class="swiper-slide">
+                <article class="model-card">
+                  <header class="card-header">
+                    <h4>KODAK PIXPRO FZ55</h4>
+                    <div class="window-controls">
+                      <button type="button" class="win95-btn minimize" aria-label="Свернуть"></button>
+                      <button type="button" class="win95-btn maximize" aria-label="Развернуть"></button>
+                      <button type="button" class="win95-btn close" aria-label="Закрыть"></button>
+                    </div>
+                  </header>
+
+                  <div class="card-image">
+                    <img src="rightcamera.svg" alt="Kodak Pixpro FZ55" />
+                  </div>
+
+                  <button type="button" class="model-more-btn">Подробнее</button>
+                </article>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="models-slider-controls">
+          <button class="models-nav models-prev" type="button" aria-label="Предыдущий слайд">
+            <img src="hand.svg" alt="" />
+          </button>
+
+          <div class="models-pagination">
+            <button class="models-bullet is-active" type="button" data-slide="0" aria-label="Слайд 1"></button>
+            <button class="models-bullet" type="button" data-slide="1" aria-label="Слайд 2"></button>
+            <button class="models-bullet" type="button" data-slide="2" aria-label="Слайд 3"></button>
+          </div>
+
+          <button class="models-nav models-next" type="button" aria-label="Следующий слайд">
+            <img src="hand.svg" alt="" />
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- КАТАЛОГ -->
+    <section class="catalog" id="catalog">
+      <div class="container">
+        <h2>Каталог</h2>
+
+        <div class="catalog-filters">
+          <select class="catalog-filter-select" id="catalog-year">
+            <option value="all">Год</option>
+            <option value="old">До 1990</option>
+            <option value="1990s">1990-е</option>
+            <option value="2000s">2000-е</option>
+            <option value="2010s">2010-е</option>
+            <option value="2020s">2020-е</option>
+          </select>
+
+          <select class="catalog-filter-select" id="catalog-type">
+            <option value="all">Тип</option>
+            <option value="film">Плёночная</option>
+            <option value="digital">Цифровая</option>
+            <option value="mirrorless">Беззеркальная</option>
+            <option value="dslr">Зеркальная</option>
+            <option value="instant">Моментальная</option>
+          </select>
+
+          <select class="catalog-filter-select" id="catalog-sort">
+            <option value="default">Сортировка</option>
+            <option value="name">По названию</option>
+            <option value="year-new">Сначала новые</option>
+            <option value="year-old">Сначала старые</option>
+          </select>
+        </div>
+
+        <div class="catalog-list">
+
+          <article class="catalog-card" data-year="1995" data-type="film">
+            <div class="catalog-card-image">
+              <img src="1camera.svg" alt="Samsung Fino 35SE" />
+            </div>
+            <h3>Samsung Fino 35SE</h3>
+            <p>Компактный плёночный фотоаппарат с автофокусом и встроенной вспышкой.</p>
+            <button type="button">Подробнее</button>
+          </article>
+
+          <article class="catalog-card" data-year="1972" data-type="film">
+            <div class="catalog-card-image">
+              <img src="2camera.svg" alt="Olympus OM-1" />
+            </div>
+            <h3>Olympus OM-1</h3>
+            <p>Компактный плёночный фотоаппарат с атмосферной оптикой и детализацией.</p>
+            <button type="button">Подробнее</button>
+          </article>
+
+          <article class="catalog-card" data-year="2002" data-type="film">
+            <div class="catalog-card-image">
+              <img src="3camera.svg" alt="Pentax Espio 200" />
+            </div>
+            <h3>Pentax Espio 200</h3>
+            <p>Компактный плёночный фотоаппарат с автофокусом и простой съёмкой.</p>
+            <button type="button">Подробнее</button>
+          </article>
+
+          <article class="catalog-card" data-year="2023" data-type="digital">
+            <div class="catalog-card-image">
+              <img src="4camera.svg" alt="Kodak PIXPRO FZ55" />
+            </div>
+            <h3>Kodak PIXPRO FZ55</h3>
+            <p>Цифровая камера для съёмки и лёгких прогулочных кадров с высоким качеством.</p>
+            <button type="button">Подробнее</button>
+          </article>
+
+          <article class="catalog-card" data-year="2015" data-type="mirrorless">
+            <div class="catalog-card-image">
+              <img src="5camera.svg" alt="Canon EOS M10" />
+            </div>
+            <h3>Canon EOS M10</h3>
+            <p>Беззеркальная камера с чистым цифровым изображением и мягким цветом.</p>
+            <button type="button">Подробнее</button>
+          </article>
+
+          <article class="catalog-card" data-year="1977" data-type="instant">
+            <div class="catalog-card-image">
+              <img src="6camera.svg" alt="Polaroid OneStep" />
+            </div>
+            <h3>Polaroid OneStep</h3>
+            <p>Моментальная камера с мягкими цветами и узнаваемым ретро-настроением.</p>
+            <button type="button">Подробнее</button>
+          </article>
+
+          <article class="catalog-card" data-year="2017" data-type="digital">
+            <div class="catalog-card-image">
+              <img src="7camera.svg" alt="Canon PowerShot G9 X" />
+            </div>
+            <h3>Canon PowerShot G9 X</h3>
+            <p>Повседневная компактная камера с большим сенсором и стильным корпусом.</p>
+            <button type="button">Подробнее</button>
+          </article>
+
+          <article class="catalog-card" data-year="2005" data-type="dslr">
+            <div class="catalog-card-image">
+              <img src="8camera.svg" alt="Canon EOS 5D" />
+            </div>
+            <h3>Canon EOS 5D</h3>
+            <p>Профессиональная зеркальная камера с глубоким цветом и деталями.</p>
+            <button type="button">Подробнее</button>
+          </article>
+
+          <article class="catalog-card" data-year="2004" data-type="digital">
+            <div class="catalog-card-image">
+              <img src="9camera.svg" alt="Canon PowerShot A35" />
+            </div>
+            <h3>Canon PowerShot A35</h3>
+            <p>Простая камера для городских прогулок и естественных снимков природы.</p>
+            <button type="button">Подробнее</button>
+          </article>
+          <article class="catalog-card" data-year="1984" data-type="film">
+  <div class="catalog-card-image">
+    <img src="11camera.svg" alt="Nikon L35AF" />
+  </div>
+  <h3>Nikon L35AF</h3>
+  <p>Плёночная компактная камера с резкой оптикой и характерным ретро-цветом.</p>
+  <button type="button">Подробнее</button>
+</article>
+
+<article class="catalog-card" data-year="1991" data-type="film">
+  <div class="catalog-card-image">
+    <img src="12camera.svg" alt="Olympus Mju I" />
+  </div>
+  <h3>Olympus Mju I</h3>
+  <p>Компактная плёночная камера для повседневной съёмки и мягких кадров.</p>
+  <button type="button">Подробнее</button>
+</article>
+
+<article class="catalog-card" data-year="1997" data-type="film">
+  <div class="catalog-card-image">
+    <img src="13camera.svg" alt="Olympus Mju II" />
+  </div>
+  <h3>Olympus Mju II</h3>
+  <p>Популярная плёночная мыльница с автофокусом и атмосферной картинкой.</p>
+  <button type="button">Подробнее</button>
+</article>
+
+<article class="catalog-card" data-year="1981" data-type="film">
+  <div class="catalog-card-image">
+    <img src="14camera.svg" alt="Canon AE-1 Program" />
+  </div>
+  <h3>Canon AE-1 Program</h3>
+  <p>Классическая плёночная зеркальная камера для выразительных портретов.</p>
+  <button type="button">Подробнее</button>
+</article>
+
+<article class="catalog-card" data-year="1976" data-type="film">
+  <div class="catalog-card-image">
+    <img src="15camera.svg" alt="Pentax K1000" />
+  </div>
+  <h3>Pentax K1000</h3>
+  <p>Надёжная механическая камера с простым управлением и винтажным настроением.</p>
+  <button type="button">Подробнее</button>
+</article>
+
+<article class="catalog-card" data-year="1983" data-type="instant">
+  <div class="catalog-card-image">
+    <img src="16camera.svg" alt="Polaroid 600" />
+  </div>
+  <h3>Polaroid 600</h3>
+  <p>Моментальная камера для живых снимков с мягким светом и ретро-эффектом.</p>
+  <button type="button">Подробнее</button>
+</article>
+
+<article class="catalog-card" data-year="1999" data-type="digital">
+  <div class="catalog-card-image">
+    <img src="17camera.svg" alt="Sony Cyber-shot DSC-F505" />
+  </div>
+  <h3>Sony Cyber-shot DSC-F505</h3>
+  <p>Ранняя цифровая камера с необычным корпусом и характерной картинкой.</p>
+  <button type="button">Подробнее</button>
+</article>
+
+<article class="catalog-card" data-year="2001" data-type="digital">
+  <div class="catalog-card-image">
+    <img src="18camera.svg" alt="Canon PowerShot G2" />
+  </div>
+  <h3>Canon PowerShot G2</h3>
+  <p>Цифровая компактная камера с тёплым цветом и винтажной цифровой эстетикой.</p>
+  <button type="button">Подробнее</button>
+</article>
+
+<article class="catalog-card" data-year="2006" data-type="digital">
+  <div class="catalog-card-image">
+    <img src="19camera.svg" alt="Sony Cyber-shot W50" />
+  </div>
+  <h3>Sony Cyber-shot W50</h3>
+  <p>Лёгкая цифровая камера для прогулок, вечеринок и повседневных кадров.</p>
+  <button type="button">Подробнее</button>
+</article>
+
+<article class="catalog-card" data-year="2008" data-type="digital">
+  <div class="catalog-card-image">
+    <img src="20camera.png" alt="Canon IXUS 80 IS" />
+  </div>
+  <h3>Canon IXUS 80 IS</h3>
+  <p>Компактная цифровая камера с мягкой детализацией и ностальгичным вайбом.</p>
+  <button type="button">Подробнее</button>
+</article>
+
+<article class="catalog-card" data-year="2010" data-type="digital">
+  <div class="catalog-card-image">
+    <img src="21camera.png" alt="Fujifilm FinePix JX250" />
+  </div>
+  <h3>Fujifilm FinePix JX250</h3>
+  <p>Простая цифровая камера для естественных снимков и лёгкой съёмки.</p>
+  <button type="button">Подробнее</button>
+</article>
+
+<article class="catalog-card" data-year="2012" data-type="mirrorless">
+  <div class="catalog-card-image">
+    <img src="22camera.png" alt="Sony NEX-5N" />
+  </div>
+  <h3>Sony NEX-5N</h3>
+  <p>Беззеркальная камера с компактным корпусом и выразительным цифровым цветом.</p>
+  <button type="button">Подробнее</button>
+</article>
+
+<article class="catalog-card" data-year="2014" data-type="mirrorless">
+  <div class="catalog-card-image">
+    <img src="23camera.png" alt="Fujifilm X-T1" />
+  </div>
+  <h3>Fujifilm X-T1</h3>
+  <p>Беззеркальная камера с красивой цветопередачей и классическим дизайном.</p>
+  <button type="button">Подробнее</button>
+</article>
+
+<article class="catalog-card" data-year="2016" data-type="dslr">
+  <div class="catalog-card-image">
+    <img src="24camera.png" alt="Canon EOS 80D" />
+  </div>
+  <h3>Canon EOS 80D</h3>
+  <p>Зеркальная камера для портретов, предметной съёмки и детальных кадров.</p>
+  <button type="button">Подробнее</button>
+</article>
+
+<article class="catalog-card" data-year="2021" data-type="mirrorless">
+  <div class="catalog-card-image">
+    <img src="25camera.png" alt="Canon EOS R50" />
+  </div>
+  <h3>Canon EOS R50</h3>
+  <p>Современная беззеркальная камера для фото, видео и чистого изображения.</p>
+  <button type="button">Подробнее</button>
+</article>
+
+        </div>
+
+        <p class="catalog-empty" hidden>Ничего не найдено :(<br> Попробуйте изменить параметры поиска</p>
+
+        <div class="models-slider-controls catalog-controls">
+          <button class="models-nav catalog-prev" type="button" aria-label="Предыдущая страница">
+            <img src="hand.svg" alt="" />
+          </button>
+
+          <div class="models-pagination catalog-pagination"></div>
+
+          <button class="models-nav catalog-next" type="button" aria-label="Следующая страница">
+            <img src="hand.svg" alt="" />
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ГАЛЕРЕЯ -->
+    <section class="rent-gallery">
+      <div class="container">
+        <h2>Галерея</h2>
+
+        <div class="gallery-flex">
+
+          <div class="gallery-row gallery-row-top">
+            <div class="gallery-photo gallery-photo-small">
+              <img src="gallery1.svg" alt="Галерея" />
+            </div>
+
+            <div class="gallery-photo gallery-photo-wide">
+              <img src="gallery2.svg" alt="Галерея" />
+            </div>
+          </div>
+
+          <div class="gallery-row gallery-row-middle">
+            <div class="gallery-photo gallery-photo-wide">
+              <img src="gallery3.svg" alt="Галерея" />
+            </div>
+
+            <div class="gallery-photo gallery-photo-small">
+              <img src="gallery4.svg" alt="Галерея" />
+            </div>
+          </div>
+
+          <div class="gallery-row gallery-row-bottom">
+
+            <article class="gallery-media-window">
+              <header class="card-header">
+                <h4>MEDIA</h4>
+                <div class="window-controls">
+                  <button type="button" class="win95-btn minimize" aria-label="Свернуть"></button>
+                  <button type="button" class="win95-btn maximize" aria-label="Развернуть"></button>
+                  <button type="button" class="win95-btn close" aria-label="Закрыть"></button>
+                </div>
+              </header>
+
+              <div class="gallery-media-content">
+                <h3>Больше в наших соцсетях</h3>
+                <p>
+                  Там мы делимся новыми проектами, атмосферой студий, процессом съемок 
+                  и полезными новостями, чтобы вы всегда были в курсе наших возможностей и 
+                  вдохновлялись на новые кадры.
+                </p>
+
+                <div class="gallery-socials">
+
+                  <a href="#" aria-label="VK">
+                    <img src="vk.png" alt="" />
+                  </a>
+                  <a href="#" aria-label="TikTok">
+                    <img src="tt.png" alt="" />
+                  </a>
+                  <a href="#" aria-label="Telegram">
+                    <img src="tg.png" alt="" />
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <div class="gallery-photo gallery-photo-mini">
+              <img src="gallery5.svg" alt="Галерея" />
+            </div>
+
+            <div class="gallery-photo gallery-photo-mini">
+              <img src="gallery6.svg" alt="Галерея" />
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="questions">
+      <div class="container">
+        <h2>Частые вопросы</h2>
+
+        <div class="accordion">
+          <details open>
+            <summary>Как забронировать студию или технику?</summary>
+            <p>
+              Вы можете оформить бронь через форму на сайте, мессенджеры,
+              соцсети или по телефону. После заявки администратор связывается
+              с вами и подтверждает бронь.
+            </p>
+          </details>
+
+          <details>
+            <summary>Нужно ли вносить предоплату?</summary>
+            <p>
+              Да, для подтверждения бронирования может потребоваться предоплата.
+              Точные условия зависят от выбранной камеры, даты и срока аренды.
+            </p>
+          </details>
+
+          <details>
+            <summary>Можно ли продлить аренду?</summary>
+            <p>
+              Да, аренду можно продлить, если техника свободна на нужные даты.
+              Для этого заранее свяжитесь с администратором.
+            </p>
+          </details>
+
+          <details>
+            <summary>Можно ли отменить или перенести бронь?</summary>
+            <p>
+              Да, перенос или отмена возможны. Условия зависят от времени до начала
+              бронирования и выбранной услуги.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+
+      <div class="footer-inner">
+
+        <div class="footer-column footer-logo-column">
+          <a href="#" class="footer-logo" aria-label="Главная">
+            <img src="logo.svg" alt="Иконка камеры">
+          </a>
+        </div>
+
+        <section class="footer-column">
+          <h3>Контакты</h3>
+          <p>+7 (991) 132-03-04</p>
+          <p>+7 (915) 138-42-00</p>
+
+          <h3 class="footer-social-title">Соцсети</h3>
+          <p>collage@gmail.ru</p>
+
+          <div class="footer-socials">
+            <a href="#" class="social-link" aria-label="Telegram">
+              <span class="social-icon-wrap">
+                <img src="tg.png" alt="Telegram">
+              </span>
+            </a>
+
+            <a href="#" class="social-link" aria-label="VK">
+              <span class="social-icon-wrap">
+                <img src="vk.png" alt="VK">
+              </span>
+            </a>
+
+            <a href="#" class="social-link" aria-label="Instagram">
+              <span class="social-icon-wrap">
+                <img src="tt.png" alt="Instagram">
+              </span>
+            </a>
+          </div>
+        </section>
+
+        <section class="footer-column">
+          <h3>Адреса</h3>
+          <p>г. Санкт-Петербург, д. Новосаратовка, Покровская дорога, д. 58/2</p>
+          <p>г. Санкт-Петербург, ул. Варшавская, 23 к.1</p>
+          <p>Ленинградская область</p>
+          <p>г. Санкт-Петербург, ул. Новостроек, 13 лит Б</p>
+          <p>Ленинградская область, г. Пушкино, ул. Бухарестская улица, 35 к3</p>
+        </section>
+
+        <nav class="footer-column footer-nav">
+          <h3>Навигация</h3>
+          <a href="/fourth screen/index.html">Локации</a>
+          <a href="/second screen/index.html">Ассортименты</a>
+          <a href="/third screen/index.html">Обработка</a>
+          <a href="#contacts">Контакты</a>
+          <a class="js-profile-open" href="/fifth screen/index.html">Личный кабинет</a>
+        </nav>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>@ 2025 Коллаж | Все права защищены</p>
+        <a href="#">Политика конфиденциальности</a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Модальные окна -->
+  <div class="modal-layer" aria-hidden="true">
+    <div class="modal-window modal-detail-window" data-modal="detail" role="dialog" aria-modal="true" aria-labelledby="modal-detail-title" hidden>
+      <header class="modal-window-header">
+        <span class="modal-window-name">CAMERA</span>
+        <div class="window-controls modal-window-controls">
+          <button class="win95-btn minimize" type="button" aria-label="Свернуть"></button>
+          <button class="win95-btn close js-modal-close" type="button" aria-label="Закрыть"></button>
+        </div>
+      </header>
+
+      <div class="modal-detail-body">
+        <div class="modal-detail-text">
+          <h2 id="modal-detail-title"></h2>
+          <p class="modal-detail-description"></p>
+
+          <h3 class="modal-detail-subtitle">Характеристики</h3>
+          <div class="modal-detail-features"></div>
+
+          <button class="js-modal-order" type="button">Заказать</button>
+        </div>
+
+        <div class="modal-detail-image is-camera">
+          <img src="" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-window modal-order-window" data-modal="order" role="dialog" aria-modal="true" aria-labelledby="modal-order-title" hidden>
+      <header class="modal-window-header">
+        <span class="modal-window-name">CART</span>
+        <div class="window-controls modal-window-controls">
+          <button class="win95-btn minimize" type="button" aria-label="Свернуть"></button>
+          <button class="win95-btn close js-modal-close" type="button" aria-label="Закрыть"></button>
+        </div>
+      </header>
+
+      <form class="modal-order-body">
+        <div class="modal-order-left">
+          <h2 id="modal-order-title">Заполнение заявки на:</h2>
+
+          <div class="modal-order-list"></div>
+
+          <div class="modal-order-total">
+            <strong>Итого:</strong>
+            <span class="modal-order-price">0 руб.</span>
+          </div>
+          <p class="modal-order-note">Предварительная сумма, страховка не включена</p>
+
+          <label class="modal-rules-check">
+            <input type="checkbox" checked />
+            <span>С правилами пользования и бронирования ознакомлен</span>
+          </label>
+        </div>
+
+        <div class="modal-order-right">
+          <input type="text" name="name" placeholder="ФИО:" />
+          <input type="tel" name="phone" placeholder="Телефон:" />
+          <input type="email" name="email" placeholder="Почта:" />
+          <textarea name="message" placeholder="Опишите свой запрос..."></textarea>
+
+          <div class="modal-order-actions">
+            <button class="js-modal-back" type="button">Назад</button>
+            <button class="js-modal-submit" type="submit">Отправить</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="modal-window modal-success-window" data-modal="success" role="dialog" aria-modal="true" aria-labelledby="modal-success-title" hidden>
+      <header class="modal-window-header">
+        <span class="modal-window-name">MESSAGE</span>
+        <div class="window-controls modal-window-controls">
+          <button class="win95-btn minimize" type="button" aria-label="Свернуть"></button>
+          <button class="win95-btn maximize" type="button" aria-label="Развернуть"></button>
+          <button class="win95-btn close js-modal-close" type="button" aria-label="Закрыть"></button>
+        </div>
+      </header>
+
+      <div class="modal-success-body">
+    
+        <div>
+          <h2 id="modal-success-title">Сообщение отправлено!</h2>
+          <p>Мы скоро с вами свяжемся</p>
+        </div>
+      
+      </div>
+    </div>
+  </div>
+
+  <!-- Модальное окно входа / регистрации -->
+<div class="profile-modal-layer" aria-hidden="true">
+  <div class="profile-modal" role="dialog" aria-modal="true" aria-labelledby="profile-window-title">
+    <header class="profile-modal-header">
+      <span id="profile-window-title" class="profile-window-title">ENTER</span>
+
+      <div class="profile-window-controls">
+        <button class="profile-window-btn profile-minimize" type="button" aria-label="Свернуть"></button>
+        <button class="profile-window-btn profile-close js-profile-close" type="button" aria-label="Закрыть"></button>
+      </div>
+    </header>
+
+    <div class="profile-modal-body">
+
+      <div class="profile-tabs">
+        <button class="profile-tab is-active" type="button" data-profile-tab="login">Вход в профиль</button>
+        <button class="profile-tab" type="button" data-profile-tab="register">Регистрация</button>
+      </div>
+
+      <form class="profile-form is-active" data-profile-form="login">
+        <label class="profile-field">
+          <input type="tel" name="phone" placeholder="Телефон:" />
+        </label>
+
+        <label class="profile-field">
+          <input type="email" name="email" placeholder="Почта:" />
+        </label>
+
+        <label class="profile-field">
+          <input type="password" name="password" placeholder="Пароль:" />
+        </label>
+
+        <label class="profile-recovery">
+          <input type="checkbox" />
+          <span>Восстановление аккаунта и пароля</span>
+        </label>
+
+        <div class="profile-actions">
+          <button class="profile-action-button js-profile-close" type="button">Назад</button>
+          <button class="profile-action-button" type="submit">Войти</button>
+        </div>
+      </form>
+
+      <form class="profile-form" data-profile-form="register">
+        <label class="profile-field">
+          <input type="tel" name="phone" placeholder="Телефон:" />
+        </label>
+
+        <label class="profile-field">
+          <input type="email" name="email" placeholder="Почта:" />
+        </label>
+
+        <label class="profile-field">
+          <input type="password" name="password" placeholder="Пароль:" />
+        </label>
+
+        <p class="profile-password-hint">
+          Пароль должен содержать: строчные и прописные буквы, цифры и символы.
+        </p>
+
+        <div class="profile-actions">
+          <button class="profile-action-button js-profile-close" type="button">Назад</button>
+          <button class="profile-action-button" type="submit">Регистрация</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

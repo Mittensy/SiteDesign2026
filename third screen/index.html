@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Обработка фото</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet"
+  />
+</head>
+
+<body>
+
+  <header class="site-header">
+  <div class="container header-inner">
+
+    <a href="/first screen/index.html" class="logo" aria-label="Главная">
+      <img src="logo.svg" alt="Логотип" />
+    </a>
+
+    <button class="burger-btn" type="button" aria-label="Открыть меню" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="site-nav">
+      <ul>
+        <li><a href="/fourth screen/index.html">Локации</a></li>
+        <li><a href="/second screen/index.html">Ассортимент</a></li>
+        <li><a href="/third screen/index.html#processing">Обработка</a></li>
+        <li><a class="js-profile-open" href="/fifth screen/index.html">Личный кабинет</a></li>
+      </ul>
+    </nav>
+
+  </div>
+</header>
+
+  <main id="processing">
+
+    <section class="hero-section">
+      <img class="hero-bg" src="mainBG.svg" alt="" />
+
+      <div class="container hero-grid">
+        <div class="hero-image">
+          <pre class="ascii ascii-left" aria-hidden="true">
+⠀⠀⠀⠀⠀⣠⣤⡦⣤⣬⣍⡉⠒⢤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⣠⠒⠉⠁⠀⠀⠀⠀⠈⠙⠻⣦⣜⠳⣄⢀⣀⣀⣠⣄⣀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣴⡿⠶⣦⡀⠀⠀⠀⠀⠀⠀⠀
+⠀⡜⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢈⢿⡖⠛⣯⠀⠀⣀⣀⣀⣀⡀⠈⠉⠓⠒⠠⠤⣀⣀⠀⠀⠀⠀⠻⠇⠀⢸⡽⠀⠀⠀⠀⠀⠀⠀
+⣼⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠞⠃⣤⣽⣶⠾⣿⠉⠉⠉⠉⠉⠉⠙⠓⢤⡀⠀⠀⠀⠉⠙⠒⠶⢤⣤⣤⡴⠋⠁⠀⠀⠀⠀⠀⠀⠀
+⢿⠀⠀⠀⠀⠀⠀⠀⠀⡠⠊⣠⣶⣿⠋⠉⣏⠀⢹⡀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠣⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠘⣆⢀⣤⡀⠀⠀⠀⡼⢥⣶⠿⠙⠀⠀⠀⡇⠀⢸⡇⠀⠀⠀⠀⢠⣦⣤⠀⠀⠀⢹⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠈⠻⣿⡟⠀⠀⣾⣽⡿⠏⠁⠀⠀⠀⡸⠁⠀⣾⠀⠀⠀⠀⠀⢯⠙⠃⠀⠀⠀⣸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⣑⣿⡟⠃⠀⠀⠀⠀⡴⠁⠀⣰⠏⠃⠀⠀⠀⠀⠘⢦⣄⣀⣠⡴⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⢀⠀⢀⣾⠟⠐⢲⡷⠶⢶⡞⠁⠀⣴⠟⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⢰⢿⡿⣾⡏⠀⠀⠀⠁⢰⠏⠀⢀⡾⡉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠸⣌⢠⡿⠄⠀⢀⣠⡶⠁⠀⡰⠏⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠈⣿⡟⠛⠋⢡⠞⠀⣠⠞⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⢠⡟⠀⠀⢠⠃⠀⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⢸⠇⠀⠀⡏⠀⠀⠀⠀⣴⣗⠲⢤⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⣼⠀⠀⢸⡇⠀⠀⠀⠈⠛⠿⠃⠘⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⣧⠀⠀⠀⢷⡀⠀⠀⠀⠀⠀⢀⡼⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⢸⠀⠀⠀⠈⠻⢶⣤⣤⣤⠶⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠸⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠘⣆⠀⠀⣰⣦⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠉⠳⢤⣽⡿⠙⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+          </pre>
+
+          <img src="mainPhoto.svg" alt="Главная фотография" />
+        </div>
+
+        <div class="hero-content">
+          <h1>Обработка</h1>
+
+          <p>
+            Мы подчеркиваем достоинства фотографии, улучшаем цвет и детали,
+            сохраняя естественность и стиль каждого изображения.
+          </p>
+
+          <a class="button" href="#order">Заказать</a>
+        </div>
+
+        <pre class="ascii ascii-right" aria-hidden="true">
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡠⠄⠒⠂⠀⠐⠒⠢⠤⣀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡔⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠑⠢⡀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡌⠀⠀⠠⠀⠀⠀⢄⣀⣤⣶⡶⣶⣦⣤⣈⢆⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⠁⠀⠀⠀⠀⠀⣴⠟⠋⠀⠀⠀⠀⠀⠈⠛⢿⣧⡀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢃⠀⠀⠀⢀⣾⠋⠀⠆⠀⠀⠀⠀⠀⠀⠀⠀⠙⣿⣄⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠓⠄⣀⣸⣇⠀⠊⠀⠀⠀⠀⠒⢄⠀⠀⠀⠀⡟⣿⡆
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⡆⠀⠀⠀⡇⢹⡇
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡀⠀⠀⠀⠀⠀⡔⠊⠉⠉⠒⣄⠀⠻⣄⠀⠀⠀⠀⠀⠀⢠⠃⠀⠀⡰⠁⣼⡇
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣦⢹⠇⣴⣾⠇⠀⢸⠀⠀⠰⣦⠀⠈⡆⠀⠉⠳⠤⡤⠤⠤⠖⠁⠀⠀⡐⠁⢀⣿⠃
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡾⢃⠁⣚⣭⣤⡀⠀⠀⠳⢤⡴⠟⠀⢀⠇⢀⣀⣰⣾⣶⠀⠀⠀⢀⡠⠊⠀⣠⣿⠋⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⡆⠀⣀⠰⠂⠓⠉⠉⠉⠉⠁⠀⠀⠀⠀⣀⠀⣴⡋⣠⣿⣿⡿⠟⠉⢀⠠⠂⠁⢀⣠⣾⠟⠁⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣷⣿⡿⠏⠒⣉⣤⣤⣤⣶⣶⣦⣭⣭⣭⣭⣉⣁⣀⣒⣛⣛⣛⡉⣭⣀⣀⣂⣉⣤⣤⣶⡾⠟⠋⠁⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢀⣴⣿⡿⢛⣩⡴⠾⠛⢉⡉⠭⠬⠥⠭⠬⠥⣉⣉⡉⠉⠉⠛⠛⠛⠻⠿⢿⣿⣿⣿⣿⣿⣿⣿⣶⣦⣤⡀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⢠⣾⠟⣩⡶⠛⣁⣤⣴⣮⣯⣴⣤⣬⣍⠂⢤⡀⢠⣀⠉⣙⣓⠦⣄⡀⠀⠀⠀⠈⠙⢿⣿⠙⣿⣿⣿⣿⣿⣿⡆⠀⠀⠀⠀
+⠀⠀⠀⠀⣰⡿⣩⡾⠋⣠⡾⠛⠉⠁⠀⠀⠀⠀⠈⠙⢿⣦⡈⢦⠙⣿⣮⡛⠀⠀⠙⢶⡀⠀⠀⠀⠀⠀⠀⠈⠉⠀⠙⠿⠛⠀⠀⠀⠀⠀
+⠀⠀⠀⣰⢟⡴⠋⣠⠞⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⣿⡄⢳⠀⠇⠰⣦⠀⠹⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⣰⣿⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢣⠀⠀⠙⣿⣿⠀⡾⢃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⢳⠸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠑⠤⢀⠠⠊⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+        </pre>
+      </div>
+    </section>
+
+    <section class="types-section">
+  <div class="container">
+    <h2>Виды обработки</h2>
+
+    <div class="swiper types-slider">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <div class="types-grid">
+            <div class="types-image">
+              <img src="plenkaMain.svg" alt="Восстановление плёнки" />
+            </div>
+
+            <div class="types-content">
+              <h3>Восстановление плёнки</h3>
+
+              <p>
+                Восстановление плёнки позволяет бережно вернуть к жизни старые кадры,
+                сохранить их атмосферу и уникальный характер. Мы помогаем устранить
+                следы времени, улучшить качество изображения, восстановить цвет,
+                чёткость и детали.
+              </p>
+
+              <button class="button" type="button">Подробнее</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="types-grid">
+            <div class="types-image">
+              <img src="plenkaMain2.svg" alt="Ретушь фото" />
+            </div>
+
+            <div class="types-content">
+              <h3>Ретушь фото</h3>
+
+              <p>
+                Ретушь помогает аккуратно убрать лишние детали, скорректировать кожу,
+                свет, цвет и общее настроение кадра. Мы сохраняем естественность
+                фотографии и делаем изображение более цельным и выразительным.
+              </p>
+
+              <button class="button" type="button">Подробнее</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="types-grid">
+            <div class="types-image">
+              <img src="plenkaMain3.svg" alt="Цветокоррекция" />
+            </div>
+
+            <div class="types-content">
+              <h3>Цветокоррекция</h3>
+
+              <p>
+                Цветокоррекция помогает настроить свет, оттенки, контраст и атмосферу
+                фотографии. Мы можем сделать кадр мягким, кинематографичным,
+                плёночным или более ярким — в зависимости от вашего запроса.
+              </p>
+
+              <button class="button" type="button">Подробнее</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="models-slider-controls types-controls">
+      <button class="models-nav types-prev" type="button" aria-label="Предыдущий слайд">
+        <img src="hand.svg" alt="" />
+      </button>
+
+      <div class="types-pagination"></div>
+
+      <button class="models-nav types-next" type="button" aria-label="Следующий слайд">
+        <img src="hand.svg" alt="" />
+      </button>
+    </div>
+  </div>
+</section>
+
+
+    <section class="examples-section">
+      <div class="container">
+        <h2>Примеры обработки</h2>
+
+        <div class="gallery-grid">
+          <img class="gallery-item gallery-1" src="1gallery.svg" alt="Пример обработки 1" />
+          <img class="gallery-item gallery-2" src="2gallery.svg" alt="Пример обработки 2" />
+          <img class="gallery-item gallery-3" src="3gallery.svg" alt="Пример обработки 3" />
+          <img class="gallery-item gallery-4" src="4gallery.svg" alt="Пример обработки 4" />
+
+          <article class="media-card">
+            <div class="window-bar">
+              <span>MEDIA</span>
+
+              <div class="window-controls">
+                  <button class="win95-btn minimize" aria-label="Свернуть" type="button"></button>
+                  <button class="win95-btn maximize" aria-label="Развернуть" type="button"></button>
+                  <button class="win95-btn close" aria-label="Закрыть" type="button"></button>
+                </div>
+            </div>
+
+            <div class="media-card-body">
+              <h3>Больше в наших соцсетях</h3>
+
+              <p>
+                Там мы делимся новыми проектами, атмосферой студий, процессом съемок и полезными новостями, 
+                чтобы вы всегда были в курсе наших возможностей и вдохновлялись на новые кадры.
+              </p>
+
+              <div class="media-socials">
+                <a href="#" aria-label="Telegram"><img src="tg.png" alt="" /></a>
+                <a href="#" aria-label="VK"><img src="vk.png" alt="" /></a>
+                <a href="#" aria-label="TikTok"><img src="tt.png" alt="" /></a>
+              </div>
+            </div>
+          </article>
+
+          <img class="gallery-item gallery-5" src="5gallery.svg" alt="Пример обработки 5" />
+          <img class="gallery-item gallery-6" src="6gallery.svg" alt="Пример обработки 6" />
+        </div>
+      </div>
+    </section>
+
+    <section class="order-section" id="order">
+      <div class="container">
+        <h2>Заказать обработку</h2>
+
+        <div class="order-grid">
+          <form class="order-form">
+            <div class="window-bar">
+              <span>Message</span>
+
+              <div class="window-controls">
+                  <button class="win95-btn minimize" aria-label="Свернуть" type="button"></button>
+                  <button class="win95-btn maximize" aria-label="Развернуть" type="button"></button>
+                  <button class="win95-btn close" aria-label="Закрыть" type="button"></button>
+                </div>
+            </div>
+
+            <label>
+              <span>ФИО:</span>
+              <input type="text" name="name" />
+            </label>
+
+            <label>
+              <span>Телефон:</span>
+              <input type="tel" name="phone" />
+            </label>
+
+            <label>
+              <span>Почта:</span>
+              <input type="email" name="email" />
+            </label>
+
+            <textarea name="message" placeholder="Опишите свой запрос..."></textarea>
+
+            <div class="form-bottom">
+  <span class="folder-icon" aria-hidden="true"><img src="Papka.svg" alt="" /></span>
+
+  <button class="button form-submit-button" type="submit">
+    <span class="submit-text">Отправить</span>
+    <img class="submit-mail-icon" src="pismo.svg" alt="" />
+  </button>
+</div>
+        
+
+          </form>
+
+          <div class="rules">
+            <article>
+              <h3>1. Правила</h3>
+
+              <p>
+               Настоятельно просим воздержаться от нецензурной лексики в своих заявках и материала чувствительного характера.
+              Если вы хотите прикрепить файлы больше 30 мб и/или больше 3 шт, напишите нам на почту, и мы свяжемся с вами. 
+              После отпраки вам будет направлено письмо длярегистрации аккаунта, обязательно подтвердите вход 
+              или дождитесь звонка от администратора.
+              </p>
+            </article>
+
+            <article>
+              <h3>2. Сроки</h3>
+
+              <p>
+                Сроки рассмотрения заявки и обратной связи зависят от объема материалов и текущей загрузки. Мы стараемся 
+                обрабатывать все обращения как можно быстрее и связываемся с вами в ближайшее время после получения.
+                Если вы столкнулись с задержкой более трех дней свяжитесь с нами любым удобным способом.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section">
+      <div class="container">
+        <h2>Частые вопросы</h2>
+
+        <div class="accordion">
+          <details open>
+            <summary>Как мы работаем?</summary>
+
+            <p>
+              Мы выполняем базовую цветокоррекцию, детальную ретушь,
+              художественную обработку, стилизацию под плёнку и восстановление
+              старых фотографий.
+            </p>
+          </details>
+
+          <details>
+            <summary>Вы работаете с плёночными фотографиями?</summary>
+
+            <p>
+              Да, мы работаем со сканами плёночных фотографий и можем восстановить
+              цвет, контраст, детали и общее настроение кадра.
+            </p>
+          </details>
+
+          <details>
+            <summary>Делаете ли вы обработку фотографий онлайн?</summary>
+
+            <p>
+              Да, вы можете отправить материалы онлайн и получить готовые файлы
+              в цифровом формате.
+            </p>
+          </details>
+
+          <details>
+            <summary>Какие виды обработки вы делаете?</summary>
+
+            <p>
+              Ретушь, цветокоррекцию, восстановление, стилизацию под плёнку
+              и художественную обработку.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+<footer class="site-footer">
+    <div class="container">
+
+      <div class="footer-inner">
+
+        <div class="footer-column footer-logo-column">
+          <a href="#" class="footer-logo" aria-label="Главная">
+            <img src="logo.svg" alt="Иконка камеры">
+          </a>
+        </div>
+
+        <section class="footer-column">
+          <h3>Контакты</h3>
+          <p>+7 (991) 132-03-04</p>
+          <p>+7 (915) 138-42-00</p>
+
+          <h3 class="footer-social-title">Соцсети</h3>
+          <p>collage@gmail.ru</p>
+
+          <div class="footer-socials">
+            <a href="https://t.me/yourname" class="social-link" aria-label="@asdesdf">
+              <span class="social-icon-wrap">
+                <img src="tg.png" alt="Telegram">
+              </span>
+            </a>
+
+            <a href="https://vk.com/yourname" class="social-link" aria-label="VK">
+              <span class="social-icon-wrap">
+                <img src="vk.png" alt="VK">
+              </span>
+            </a>
+
+            <a href="https://tiktok.com/@yourname" class="social-link" aria-label="TikTok">
+              <span class="social-icon-wrap">
+                <img src="tt.png" alt="TikTok">
+              </span>
+            </a>
+
+          </div>
+        </section>
+
+        <section class="footer-column">
+          <h3>Адреса</h3>
+          <p>г. Санкт-Петербург, д. Новосаратовка, Покровская дорога, д. 58/2</p>
+          <p>г. Санкт-Петербург, ул. Варшавская, 23 к.1</p>
+          <p>Ленинградская область</p>
+          <p>г. Санкт-Петербург, ул. Новостроек, 13 лит Б</p>
+          <p>Ленинградская область, г. Пушкино, ул. Бухарестская улица, 35 к3</p>
+        </section>
+
+        <nav class="footer-column footer-nav">
+          <h3>Навигация</h3>
+          <a href="#">Локации</a>
+          <a href="#models">Ассортименты</a>
+          <a href="#">Обработка</a>
+          <a href="#">Контакты</a>
+          <a class="js-profile-open" href="/fifth screen/index.html">Личный кабинет</a>
+        </nav>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>@ 2025 Коллаж | Все права защищены</p>
+        <a href="#">Политика конфиденциальности</a>
+      </div>
+
+    </div>
+  </footer>
+<div class="modal-layer" aria-hidden="true">
+  <div class="modal-window modal-detail-window" data-modal="detail" role="dialog" aria-modal="true" aria-labelledby="modal-detail-title" hidden>
+    <header class="modal-window-header">
+      <span class="modal-window-name">PROCESSING</span>
+      <div class="window-controls modal-window-controls">
+        <button class="win95-btn minimize" type="button" aria-label="Свернуть"></button>
+        <button class="win95-btn close js-modal-close" type="button" aria-label="Закрыть"></button>
+      </div>
+    </header>
+
+    <div class="modal-detail-body">
+      <div class="modal-detail-text">
+        <h2 id="modal-detail-title"></h2>
+        <p class="modal-detail-description"></p>
+
+        <h3 class="modal-detail-subtitle">Что входит</h3>
+        <div class="modal-detail-features"></div>
+
+        <button class="button js-modal-order" type="button">Заказать</button>
+      </div>
+
+      <div class="modal-detail-image">
+        <img src="" alt="" />
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-window modal-order-window" data-modal="order" role="dialog" aria-modal="true" aria-labelledby="modal-order-title" hidden>
+    <header class="modal-window-header">
+      <span class="modal-window-name">CART</span>
+      <div class="window-controls modal-window-controls">
+        <button class="win95-btn minimize" type="button" aria-label="Свернуть"></button>
+        <button class="win95-btn close js-modal-close" type="button" aria-label="Закрыть"></button>
+      </div>
+    </header>
+
+    <form class="modal-order-body">
+      <div class="modal-order-left">
+        <h2 id="modal-order-title">Заполнение заявки на:</h2>
+
+        <div class="modal-order-list"></div>
+
+        <div class="modal-order-total">
+          <strong>Итого:</strong>
+          <span class="modal-order-price">0 руб.</span>
+        </div>
+        <p class="modal-order-note">Предварительная сумма, финальная цена зависит от количества фотографий</p>
+
+        <label class="modal-rules-check">
+          <input type="checkbox" checked />
+          <span>С правилами пользования и оформления заявки ознакомлен</span>
+        </label>
+      </div>
+
+      <div class="modal-order-right">
+        <input type="text" name="name" placeholder="ФИО:" />
+        <input type="tel" name="phone" placeholder="Телефон:" />
+        <input type="email" name="email" placeholder="Почта:" />
+        <textarea name="message" placeholder="Опишите свой запрос..."></textarea>
+
+        <div class="modal-order-actions">
+          <button class="button js-modal-back" type="button">Назад</button>
+          <button class="button js-modal-submit" type="submit">Отправить</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="modal-window modal-success-window" data-modal="success" role="dialog" aria-modal="true" aria-labelledby="modal-success-title" hidden>
+    <header class="modal-window-header">
+      <span class="modal-window-name">MESSAGE</span>
+      <div class="window-controls modal-window-controls">
+        <button class="win95-btn minimize" type="button" aria-label="Свернуть"></button>
+        <button class="win95-btn maximize" type="button" aria-label="Развернуть"></button>
+        <button class="win95-btn close js-modal-close" type="button" aria-label="Закрыть"></button>
+      </div>
+    </header>
+
+    <div class="modal-success-body">
+      
+      <div>
+        <h2 id="modal-success-title">Сообщение отправлено!</h2>
+        <p>Мы скоро с вами свяжемся</p>
+      </div>
+     
+    </div>
+  </div>
+</div>
+<div class="profile-modal-layer" aria-hidden="true">
+  <div class="profile-modal" role="dialog" aria-modal="true" aria-labelledby="profile-window-title">
+    <header class="profile-modal-header">
+      <span id="profile-window-title" class="profile-window-title">ENTER</span>
+
+      <div class="profile-window-controls">
+        <button class="profile-window-btn profile-minimize" type="button" aria-label="Свернуть"></button>
+        <button class="profile-window-btn profile-close js-profile-close" type="button" aria-label="Закрыть"></button>
+      </div>
+    </header>
+
+    <div class="profile-modal-body">
+
+      <div class="profile-tabs">
+        <button class="profile-tab is-active" type="button" data-profile-tab="login">Вход в профиль</button>
+        <button class="profile-tab" type="button" data-profile-tab="register">Регистрация</button>
+      </div>
+
+      <form class="profile-form is-active" data-profile-form="login">
+        <label class="profile-field">
+          <input type="tel" name="phone" placeholder="Телефон:" />
+        </label>
+
+        <label class="profile-field">
+          <input type="email" name="email" placeholder="Почта:" />
+        </label>
+
+        <label class="profile-field">
+          <input type="password" name="password" placeholder="Пароль:" />
+        </label>
+
+        <label class="profile-recovery">
+          <input type="checkbox" />
+          <span>Восстановление аккаунта и пароля</span>
+        </label>
+
+        <div class="profile-actions">
+          <button class="profile-action-button js-profile-close" type="button">Назад</button>
+          <button class="profile-action-button" type="submit">Войти</button>
+        </div>
+      </form>
+
+      <form class="profile-form" data-profile-form="register">
+        <label class="profile-field">
+          <input type="tel" name="phone" placeholder="Телефон:" />
+        </label>
+
+        <label class="profile-field">
+          <input type="email" name="email" placeholder="Почта:" />
+        </label>
+
+        <label class="profile-field">
+          <input type="password" name="password" placeholder="Пароль:" />
+        </label>
+
+        <p class="profile-password-hint">
+          Пароль должен содержать: строчные и прописные буквы, цифры и символы.
+        </p>
+
+        <div class="profile-actions">
+          <button class="profile-action-button js-profile-close" type="button">Назад</button>
+          <button class="profile-action-button" type="submit">Регистрация</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

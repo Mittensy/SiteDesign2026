@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Коллаж — Личный кабинет</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet"
+  />
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <a href="/first screen/index.html" class="logo" aria-label="Главная">
+        <img src="logo.svg" alt="Логотип">
+      </a>
+
+      <button class="burger-btn" type="button" aria-label="Открыть меню" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav">
+        <ul>
+          <li><a href="/fourth screen/index.html">Локации</a></li>
+          <li><a href="/second screen/index.html">Ассортимент</a></li>
+          <li><a href="/third screen/index.html">Обработка</a></li>
+          <li><a href="/fifth screen/index.html">Личный кабинет</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="cabinet-page">
+    <div class="container cabinet-container">
+
+      <section class="cabinet-top">
+        <div class="cabinet-profile-row">
+
+          <div class="profile-image-col">
+            <img class="profile-photo" src="profilePhoto.svg" alt="Фото профиля">
+            <a href="#" class="edit-link">Изменить данные</a>
+          </div>
+
+          <div class="profile-info-col">
+            <h3 class="profile-title">Контактная информация:</h3>
+
+            <div class="profile-fields">
+              <label class="profile-field">
+                <span>Имя:</span>
+                <input type="text" value="Анна Сергеевна Давыдова" readonly>
+              </label>
+
+              <label class="profile-field">
+                <span>Телефон:</span>
+                <input type="text" value="+7 (931) 245-74-83" readonly>
+              </label>
+
+              <label class="profile-field">
+                <span>Почта:</span>
+                <input type="text" value="lubluepk@gmail.com" readonly>
+              </label>
+            </div>
+          </div>
+
+          <aside class="cabinet-nav-col">
+            <h3 class="side-title">Навигация</h3>
+
+            <nav class="side-nav">
+              <a href="#history">История заказов</a>
+              <a href="#active">Активные заказы</a>
+              <a href="#render">Заказы обработки</a>
+              <a href="#faq">Поддержка</a>
+            </nav>
+          </aside>
+
+        </div>
+      </section>
+
+      <section class="quick-actions js-card-slider">
+        <h2 class="quick-title">Вас может заинтересовать:</h2>
+
+        <div class="row g-4">
+
+          <div class="col-lg-4">
+            <article class="win-card quick-card h-100">
+              <header class="win-titlebar">
+                <h4>CAMERA</h4>
+
+                <div class="window-controls">
+                  <button class="win95-btn minimize" type="button" aria-label="Свернуть"></button>
+                  <button class="win95-btn maximize" type="button" aria-label="Развернуть"></button>
+                  <button class="win95-btn close" type="button" aria-label="Закрыть"></button>
+                </div>
+              </header>
+
+              <div class="win-body">
+                <h3>Прокат камер</h3>
+                <p>Камеры любого формата для вашего творческого замысла.</p>
+                <a href="/second screen/index.html" class="retro-button">Подробнее</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-4">
+            <article class="win-card quick-card h-100">
+              <header class="win-titlebar">
+                <h4>STUDIO</h4>
+
+                <div class="window-controls">
+                  <button class="win95-btn minimize" type="button" aria-label="Свернуть"></button>
+                  <button class="win95-btn maximize" type="button" aria-label="Развернуть"></button>
+                  <button class="win95-btn close" type="button" aria-label="Закрыть"></button>
+                </div>
+              </header>
+
+              <div class="win-body">
+                <h3>Аренда студии</h3>
+                <p>Все для фотосессии, мероприятия или творческого проекта.</p>
+                <a href="/fourth screen/index.html" class="retro-button">Подробнее</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-4">
+            <article class="win-card quick-card h-100">
+              <header class="win-titlebar">
+                <h4>RENDER</h4>
+
+                <div class="window-controls">
+                  <button class="win95-btn minimize" type="button" aria-label="Свернуть"></button>
+                  <button class="win95-btn maximize" type="button" aria-label="Развернуть"></button>
+                  <button class="win95-btn close" type="button" aria-label="Закрыть"></button>
+                </div>
+              </header>
+
+              <div class="win-body">
+                <h3>Обработка фото</h3>
+                <p>Бережно восстановим, отцифруем и отретушируем ваши фото.</p>
+                <a href="/third screen/index.html" class="retro-button">Подробнее</a>
+              </div>
+            </article>
+          </div>
+
+        </div>
+
+        <div class="cabinet-screen-controls">
+          <button class="screen-nav screen-prev" type="button" data-card-prev aria-label="Предыдущий">
+            <img src="hand.svg" alt="">
+          </button>
+
+          <div class="screen-pagination">
+            <button class="screen-dot is-active" type="button" data-card-dot="0" aria-label="Слайд 1"></button>
+            <button class="screen-dot" type="button" data-card-dot="1" aria-label="Слайд 2"></button>
+            <button class="screen-dot" type="button" data-card-dot="2" aria-label="Слайд 3"></button>
+          </div>
+
+          <button class="screen-nav screen-next" type="button" data-card-next aria-label="Следующий">
+            <img src="hand.svg" alt="">
+          </button>
+        </div>
+      </section>
+
+      <section class="cabinet-section" id="history">
+        <h2 class="section-title">История заказов</h2>
+
+        <article class="win-card history-window">
+          <header class="win-titlebar">
+            <h4>HISTORY</h4>
+
+            <div class="window-controls">
+              <button class="win95-btn minimize" type="button" aria-label="Свернуть"></button>
+              <button class="win95-btn maximize" type="button" aria-label="Развернуть"></button>
+              <button class="win95-btn close" type="button" aria-label="Закрыть"></button>
+            </div>
+          </header>
+
+          <div class="history-table-wrap">
+            <table class="table table-borderless history-table mb-0">
+              <thead>
+                <tr>
+                  <th>№</th>
+                  <th>Услуга</th>
+                  <th>Дата</th>
+                  <th>Статус</th>
+                  <th>Оплата</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>74</td>
+                  <td>Ретушь портрета + перевод в цвет и восстановление</td>
+                  <td>01.02</td>
+                  <td>Завершено</td>
+                  <td>Оплачено</td>
+                </tr>
+
+                <tr>
+                  <td>134</td>
+                  <td>Аренда Nikon F3</td>
+                  <td>14.02</td>
+                  <td>Завершено</td>
+                  <td>Оплачено</td>
+                </tr>
+
+                <tr>
+                  <td>187</td>
+                  <td>Бронь студии “Loft”</td>
+                  <td>14.02</td>
+                  <td>Завершено</td>
+                  <td>Оплачено</td>
+                </tr>
+
+                <tr>
+                  <td>194</td>
+                  <td>Восстановление и создание фото-архива</td>
+                  <td>23.04</td>
+                  <td>В работе</td>
+                  <td>Депозит</td>
+                </tr>
+
+                <tr>
+                  <td>236</td>
+                  <td>Ретушь портретной съемки с фото-пленки Olympus-10</td>
+                  <td>23.04</td>
+                  <td>В работе</td>
+                  <td>Депозит</td>
+                </tr>
+
+                <tr>
+                  <td>252</td>
+                  <td>Аренда Canon PowerShot 5</td>
+                  <td>27.05</td>
+                  <td>Завершено</td>
+                  <td>Оплачено</td>
+                </tr>
+
+                <tr>
+                  <td>267</td>
+                  <td>Сканирование пленки и базовая цветокоррекция</td>
+                  <td>03.06</td>
+                  <td>Завершено</td>
+                  <td>Оплачено</td>
+                </tr>
+
+                <tr>
+                  <td>281</td>
+                  <td>Аренда студии Home для семейной съемки</td>
+                  <td>12.06</td>
+                  <td>Завершено</td>
+                  <td>Оплачено</td>
+                </tr>
+
+                <tr>
+                  <td>294</td>
+                  <td>Ретушь серии портретов и подготовка к печати</td>
+                  <td>18.06</td>
+                  <td>В работе</td>
+                  <td>Депозит</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+
+      <section class="cabinet-section active-section js-card-slider" id="active">
+        <h2 class="section-title">Активные заказы</h2>
+
+        <div class="row g-4">
+
+          <div class="col-lg-4">
+            <article class="win-card order-card h-100">
+              <header class="win-titlebar">
+                <h4>RENT</h4>
+
+                <div class="window-controls">
+                  <button class="win95-btn minimize" type="button" aria-label="Свернуть"></button>
+                  <button class="win95-btn maximize" type="button" aria-label="Развернуть"></button>
+                  <button class="win95-btn close" type="button" aria-label="Закрыть"></button>
+                </div>
+              </header>
+
+              <div class="win-body">
+                <h3>Аренда Canon EOS R5</h3>
+                <p>04.07.2026 - 12.07.2026</p>
+                <a href="#" class="retro-button">Подробнее</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-4">
+            <article class="win-card order-card h-100">
+              <header class="win-titlebar">
+                <h4>RENT</h4>
+
+                <div class="window-controls">
+                  <button class="win95-btn minimize" type="button" aria-label="Свернуть"></button>
+                  <button class="win95-btn maximize" type="button" aria-label="Развернуть"></button>
+                  <button class="win95-btn close" type="button" aria-label="Закрыть"></button>
+                </div>
+              </header>
+
+              <div class="win-body">
+                <h3>Прокат камер</h3>
+                <p>04.07.2026 - 12.07.2026</p>
+                <a href="#" class="retro-button">Подробнее</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-4">
+            <article class="win-card order-card h-100">
+              <header class="win-titlebar">
+                <h4>RENT</h4>
+
+                <div class="window-controls">
+                  <button class="win95-btn minimize" type="button" aria-label="Свернуть"></button>
+                  <button class="win95-btn maximize" type="button" aria-label="Развернуть"></button>
+                  <button class="win95-btn close" type="button" aria-label="Закрыть"></button>
+                </div>
+              </header>
+
+              <div class="win-body">
+                <h3>Аренда Y2K студии</h3>
+                <p>04.07.2026 12:00-19:00</p>
+                <a href="#" class="retro-button">Подробнее</a>
+              </div>
+            </article>
+          </div>
+
+        </div>
+
+        <div class="cabinet-screen-controls">
+          <button class="screen-nav screen-prev" type="button" data-card-prev aria-label="Предыдущий">
+            <img src="hand.svg" alt="">
+          </button>
+
+          <div class="screen-pagination">
+            <button class="screen-dot is-active" type="button" data-card-dot="0" aria-label="Слайд 1"></button>
+            <button class="screen-dot" type="button" data-card-dot="1" aria-label="Слайд 2"></button>
+            <button class="screen-dot" type="button" data-card-dot="2" aria-label="Слайд 3"></button>
+          </div>
+
+          <button class="screen-nav screen-next" type="button" data-card-next aria-label="Следующий">
+            <img src="hand.svg" alt="">
+          </button>
+        </div>
+      </section>
+
+      <section class="cabinet-section render-section" id="render">
+        <h2 class="section-title">Заказы обработки</h2>
+
+        <div class="render-slider js-render-slider">
+
+          <div class="render-slide is-active">
+            <article class="win-card render-window">
+              <header class="win-titlebar">
+                <h4>ORDER</h4>
+
+                <div class="window-controls">
+                  <button class="win95-btn minimize" type="button" aria-label="Свернуть"></button>
+                  <button class="win95-btn maximize" type="button" aria-label="Развернуть"></button>
+                  <button class="win95-btn close" type="button" aria-label="Закрыть"></button>
+                </div>
+              </header>
+
+              <div class="render-body">
+                <h3>Заказ #194 — Восстановление, создание фото-архива в веб версии и альбоме</h3>
+
+                <div class="render-meta">
+                  <p><b>Дата создания:</b> 23.04.2026</p>
+                  <p><b>Тип обработки:</b> Художественная ретушь, веб-восстановление, скан</p>
+                  <p><b>Куратор:</b> Суслова Анна Дмитриевна</p>
+                </div>
+
+                <p class="docs-line"><b>Документация:</b> 🗂️</p>
+
+                <div class="progress-block">
+                  <p><b>Прогресс выполнения:</b></p>
+                  <span>обновлено 27.05.2026</span>
+
+                  <div class="progress retro-progress">
+                    <div class="progress-bar" style="width: 76%"></div>
+                  </div>
+
+                  <div class="progress-labels">
+                    <span>Начало</span>
+                    <span>Перенос материала в веб-архив</span>
+                    <span>Конец</span>
+                  </div>
+                </div>
+
+                <p class="support-line"><b>Поддержка:</b> collage@gmail.ru</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="render-slide">
+            <article class="win-card render-window">
+              <header class="win-titlebar">
+                <h4>ORDER</h4>
+
+                <div class="window-controls">
+                  <button class="win95-btn minimize" type="button" aria-label="Свернуть"></button>
+                  <button class="win95-btn maximize" type="button" aria-label="Развернуть"></button>
+                  <button class="win95-btn close" type="button" aria-label="Закрыть"></button>
+                </div>
+              </header>
+
+              <div class="render-body">
+                <h3>Заказ #236 — Ретушь портретной съемки с фото-пленки Olympus-10</h3>
+
+                <div class="render-meta">
+                  <p><b>Дата создания:</b> 23.04.2026</p>
+                  <p><b>Тип обработки:</b> Портретная ретушь, цветокоррекция, чистка шума</p>
+                  <p><b>Куратор:</b> Суслова Анна Дмитриевна</p>
+                </div>
+
+                <p class="docs-line"><b>Документация:</b> 🗂️</p>
+
+                <div class="progress-block">
+                  <p><b>Прогресс выполнения:</b></p>
+                  <span>обновлено 25.05.2026</span>
+
+                  <div class="progress retro-progress">
+                    <div class="progress-bar" style="width: 48%"></div>
+                  </div>
+
+                  <div class="progress-labels">
+                    <span>Начало</span>
+                    <span>Ретушь и цвет</span>
+                    <span>Конец</span>
+                  </div>
+                </div>
+
+                <p class="support-line"><b>Поддержка:</b> collage@gmail.ru</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="render-slide">
+            <article class="win-card render-window">
+              <header class="win-titlebar">
+                <h4>ORDER</h4>
+
+                <div class="window-controls">
+                  <button class="win95-btn minimize" type="button" aria-label="Свернуть"></button>
+                  <button class="win95-btn maximize" type="button" aria-label="Развернуть"></button>
+                  <button class="win95-btn close" type="button" aria-label="Закрыть"></button>
+                </div>
+              </header>
+
+              <div class="render-body">
+                <h3>Заказ #252 — Подготовка фото к печати и цифровому архиву</h3>
+
+                <div class="render-meta">
+                  <p><b>Дата создания:</b> 27.05.2026</p>
+                  <p><b>Тип обработки:</b> Подготовка к печати, кадрирование, архивирование</p>
+                  <p><b>Куратор:</b> Суслова Анна Дмитриевна</p>
+                </div>
+
+                <p class="docs-line"><b>Документация:</b> 🗂️</p>
+
+                <div class="progress-block">
+                  <p><b>Прогресс выполнения:</b></p>
+                  <span>обновлено 27.05.2026</span>
+
+                  <div class="progress retro-progress">
+                    <div class="progress-bar" style="width: 28%"></div>
+                  </div>
+
+                  <div class="progress-labels">
+                    <span>Начало</span>
+                    <span>Подготовка файлов</span>
+                    <span>Конец</span>
+                  </div>
+                </div>
+
+                <p class="support-line"><b>Поддержка:</b> collage@gmail.ru</p>
+              </div>
+            </article>
+          </div>
+
+        </div>
+
+        <div class="render-slider-controls">
+          <button class="render-nav render-prev" type="button" data-render-prev aria-label="Предыдущий заказ">
+            <img src="hand.svg" alt="">
+          </button>
+
+          <div class="render-pagination">
+            <button class="models-bullet is-active" type="button" data-render-dot="0" aria-label="Заказ 1"></button>
+            <button class="models-bullet" type="button" data-render-dot="1" aria-label="Заказ 2"></button>
+            <button class="models-bullet" type="button" data-render-dot="2" aria-label="Заказ 3"></button>
+          </div>
+
+          <button class="render-nav render-next" type="button" data-render-next aria-label="Следующий заказ">
+            <img src="hand.svg" alt="">
+          </button>
+        </div>
+      </section>
+
+      <section class="cabinet-section faq-section" id="faq">
+        <h2 class="section-title">Частые вопросы</h2>
+
+        <div class="accordion faq-accordion" id="faqAccordion">
+
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="faqOneHeading">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne" aria-expanded="true" aria-controls="faqOne">
+                Как забронировать студию или технику?
+              </button>
+            </h3>
+
+            <div id="faqOne" class="accordion-collapse collapse show" aria-labelledby="faqOneHeading" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Вы можете оформить бронь несколькими способами: через форму на сайте, написать нам в мессенджеры или соцсети, связаться по телефону.
+                После заявки администратор связывается с вами, уточняет детали съемки и подтверждает бронь.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="faqTwoHeading">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo" aria-expanded="false" aria-controls="faqTwo">
+                Нужно ли вносить предоплату?
+              </button>
+            </h3>
+
+            <div id="faqTwo" class="accordion-collapse collapse" aria-labelledby="faqTwoHeading" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Да, для подтверждения брони требуется депозит. Остальная сумма оплачивается перед началом аренды или после согласования заказа.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="faqThreeHeading">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqThree" aria-expanded="false" aria-controls="faqThree">
+                Что входит в аренду студии?
+              </button>
+            </h3>
+
+            <div id="faqThree" class="accordion-collapse collapse" aria-labelledby="faqThreeHeading" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                В аренду входит выбранное пространство, базовый свет, мебель и реквизит, указанные в описании студии.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="faqFourHeading">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqFour" aria-expanded="false" aria-controls="faqFour">
+                Нужен ли опыт для аренды техники?
+              </button>
+            </h3>
+
+            <div id="faqFour" class="accordion-collapse collapse" aria-labelledby="faqFourHeading" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Нет, мы можем кратко объяснить базовые настройки камеры и помочь подобрать подходящую технику под вашу съемку.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+
+      <div class="footer-inner">
+
+        <div class="footer-column footer-logo-column">
+          <a href="#" class="footer-logo" aria-label="Главная">
+            <img src="logo.svg" alt="Иконка камеры">
+          </a>
+        </div>
+
+        <section class="footer-column footer-contacts">
+          <h3>Контакты</h3>
+          <p>+7 (991) 132-03-04</p>
+          <p>+7 (915) 138-42-00</p>
+
+          <h3 class="footer-social-title">Соцсети</h3>
+          <p>collage@gmail.ru</p>
+
+          <div class="footer-socials">
+            <a href="#" class="social-link" aria-label="Telegram">
+              <span class="social-icon-wrap">
+                <img src="tg.png" alt="Telegram">
+              </span>
+            </a>
+
+            <a href="#" class="social-link" aria-label="VK">
+              <span class="social-icon-wrap">
+                <img src="vk.png" alt="VK">
+              </span>
+            </a>
+
+            <a href="#" class="social-link" aria-label="Instagram">
+              <span class="social-icon-wrap">
+                <img src="tt.png" alt="Instagram">
+              </span>
+            </a>
+          </div>
+        </section>
+
+        <section class="footer-column footer-address">
+          <h3>Адреса</h3>
+          <p>г. Санкт-Петербург, д. Новосаратовка, Покровская дорога, д. 58/2</p>
+          <p>г. Санкт-Петербург, ул. Варшавская, 23 к.1</p>
+          <p>Ленинградская область</p>
+          <p>г. Санкт-Петербург, ул. Новостроек, 13 лит Б</p>
+          <p>Ленинградская область, г. Пушкино, ул. Бухарестская улица, 35 к3</p>
+        </section>
+
+        <nav class="footer-column footer-nav">
+          <h3>Навигация</h3>
+          <a href="/fourth screen/index.html">Локации</a>
+          <a href="/second screen/index.html">Ассортименты</a>
+          <a href="/third screen/index.html">Обработка</a>
+          <a href="#contacts">Контакты</a>
+          <a href="/fifth screen/index.html">Личный кабинет</a>
+        </nav>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>@ 2025 Коллаж | Все права защищены</p>
+        <a href="#">Политика конфиденциальности</a>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

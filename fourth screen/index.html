@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Аренда студий</title>
+<link href="style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+</head>
+<body>
+<header class="site-header">
+<div class="container header-inner">
+<a aria-label="Главная" class="logo" href="/first screen/index.html">
+<img alt="Логотип" src="logo.svg"/>
+</a>
+<button aria-expanded="false" aria-label="Открыть меню" class="burger-btn" type="button">
+<span></span>
+<span></span>
+<span></span>
+</button>
+<nav aria-label="Основная навигация" class="site-nav">
+<ul>
+<li><a href="/fourth screen/index.html">Локации</a></li>
+<li><a href="/second screen/index.html#popular">Ассортименты</a></li>
+<li><a href="/third screen/index.html#order">Обработка</a></li>
+<li><a class="js-profile-open" href="/fifth screen/index.html#reviews">Личный кабинет</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main id="top">
+<section class="hero-section">
+<img alt="" class="hero-bg" src="mainBG.svg"/>
+<div class="container hero-grid">
+<div class="hero-image">
+<pre aria-hidden="true" class="ascii ascii-left">
+⠀⠀⠀⠀⠀⣠⣤⡦⣤⣬⣍⡉⠒⢤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⣠⠒⠉⠁⠀⠀⠀⠀⠈⠙⠻⣦⣜⠳⣄⢀⣀⣀⣠⣄⣀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣴⡿⠶⣦⡀⠀⠀⠀⠀⠀⠀⠀
+⠀⡜⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢈⢿⡖⠛⣯⠀⠀⣀⣀⣀⣀⡀⠈⠉⠓⠒⠠⠤⣀⣀⠀⠀⠀⠀⠻⠇⠀⢸⡽⠀⠀⠀⠀⠀⠀⠀
+⣼⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠞⠃⣤⣽⣶⠾⣿⠉⠉⠉⠉⠉⠉⠙⠓⢤⡀⠀⠀⠀⠉⠙⠒⠶⢤⣤⣤⡴⠋⠁⠀⠀⠀⠀⠀⠀⠀
+⢿⠀⠀⠀⠀⠀⠀⠀⠀⡠⠊⣠⣶⣿⠋⠉⣏⠀⢹⡀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠣⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠘⣆⢀⣤⡀⠀⠀⠀⡼⢥⣶⠿⠙⠀⠀⠀⡇⠀⢸⡇⠀⠀⠀⠀⢠⣦⣤⠀⠀⠀⢹⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠈⠻⣿⡟⠀⠀⣾⣽⡿⠏⠁⠀⠀⠀⡸⠁⠀⣾⠀⠀⠀⠀⠀⢯⠙⠃⠀⠀⠀⣸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⣑⣿⡟⠃⠀⠀⠀⠀⡴⠁⠀⣰⠏⠃⠀⠀⠀⠀⠘⢦⣄⣀⣠⡴⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⢀⠀⢀⣾⠟⠐⢲⡷⠶⢶⡞⠁⠀⣴⠟⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⢰⢿⡿⣾⡏⠀⠀⠀⠁⢰⠏⠀⢀⡾⡉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠸⣌⢠⡿⠄⠀⢀⣠⡶⠁⠀⡰⠏⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠈⣿⡟⠛⠋⢡⠞⠀⣠⠞⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⢠⡟⠀⠀⢠⠃⠀⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⢸⠇⠀⠀⡏⠀⠀⠀⠀⣴⣗⠲⢤⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⣼⠀⠀⢸⡇⠀⠀⠀⠈⠛⠿⠃⠘⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⣧⠀⠀⠀⢷⡀⠀⠀⠀⠀⠀⢀⡼⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⢸⠀⠀⠀⠈⠻⢶⣤⣤⣤⠶⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠸⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠘⣆⠀⠀⣰⣦⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠉⠳⢤⣽⡿⠙⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+          </pre>
+<img alt="Главная фотография" src="mainPhoto.svg"/>
+</div>
+<div class="hero-content">
+<h1>Аренда студий</h1>
+<p>
+           Для атмосферной фотосессии, стильного контента или любого 
+           необычного творческого замысла в красивой и комфортной обстановке.
+          </p>
+<a class="button" href="#order">Заказать</a>
+</div>
+<pre aria-hidden="true" class="ascii ascii-right">
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡠⠄⠒⠂⠀⠐⠒⠢⠤⣀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡔⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠑⠢⡀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡌⠀⠀⠠⠀⠀⠀⢄⣀⣤⣶⡶⣶⣦⣤⣈⢆⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⠁⠀⠀⠀⠀⠀⣴⠟⠋⠀⠀⠀⠀⠀⠈⠛⢿⣧⡀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢃⠀⠀⠀⢀⣾⠋⠀⠆⠀⠀⠀⠀⠀⠀⠀⠀⠙⣿⣄⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠓⠄⣀⣸⣇⠀⠊⠀⠀⠀⠀⠒⢄⠀⠀⠀⠀⡟⣿⡆
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⡆⠀⠀⠀⡇⢹⡇
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡀⠀⠀⠀⠀⠀⡔⠊⠉⠉⠒⣄⠀⠻⣄⠀⠀⠀⠀⠀⠀⢠⠃⠀⠀⡰⠁⣼⡇
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣦⢹⠇⣴⣾⠇⠀⢸⠀⠀⠰⣦⠀⠈⡆⠀⠉⠳⠤⡤⠤⠤⠖⠁⠀⠀⡐⠁⢀⣿⠃
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡾⢃⠁⣚⣭⣤⡀⠀⠀⠳⢤⡴⠟⠀⢀⠇⢀⣀⣰⣾⣶⠀⠀⠀⢀⡠⠊⠀⣠⣿⠋⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⡆⠀⣀⠰⠂⠓⠉⠉⠉⠉⠁⠀⠀⠀⠀⣀⠀⣴⡋⣠⣿⣿⡿⠟⠉⢀⠠⠂⠁⢀⣠⣾⠟⠁⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣷⣿⡿⠏⠒⣉⣤⣤⣤⣶⣶⣦⣭⣭⣭⣭⣉⣁⣀⣒⣛⣛⣛⡉⣭⣀⣀⣂⣉⣤⣤⣶⡾⠟⠋⠁⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢀⣴⣿⡿⢛⣩⡴⠾⠛⢉⡉⠭⠬⠥⠭⠬⠥⣉⣉⡉⠉⠉⠛⠛⠛⠻⠿⢿⣿⣿⣿⣿⣿⣿⣿⣶⣦⣤⡀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⢠⣾⠟⣩⡶⠛⣁⣤⣴⣮⣯⣴⣤⣬⣍⠂⢤⡀⢠⣀⠉⣙⣓⠦⣄⡀⠀⠀⠀⠈⠙⢿⣿⠙⣿⣿⣿⣿⣿⣿⡆⠀⠀⠀⠀
+⠀⠀⠀⠀⣰⡿⣩⡾⠋⣠⡾⠛⠉⠁⠀⠀⠀⠀⠈⠙⢿⣦⡈⢦⠙⣿⣮⡛⠀⠀⠙⢶⡀⠀⠀⠀⠀⠀⠀⠈⠉⠀⠙⠿⠛⠀⠀⠀⠀⠀
+⠀⠀⠀⣰⢟⡴⠋⣠⠞⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⣿⡄⢳⠀⠇⠰⣦⠀⠹⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⣰⣿⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢣⠀⠀⠙⣿⣿⠀⡾⢃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⢳⠸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠑⠤⢀⠠⠊⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+        </pre>
+</div>
+</section>
+<section class="section popular-section" id="popular">
+<div class="container">
+<h2>Популярные студии</h2>
+<div class="grid-slider js-slider" data-slider="popular">
+<div class="slider-track">
+<article class="slider-slide is-active" data-slide="">
+<div class="feature-grid">
+<div class="feature-image">
+<img alt="Y2K студия" src="pop1.svg"/>
+</div>
+<div class="feature-content">
+<h3>Y2K студия</h3>
+<p>
+                Яркая и дерзкая студия в эстетике 2000-х, где сочетаются
+                глянец, блеск, неон и настроение поп-культуры. Это пространство
+                идеально подойдет для стильных индивидуальных съемок, контент-съемки,
+                клипов и смелых creative-проектов.
+              </p>
+<p>
+                Атмосфера Y2K помогает создать кадры с характером, немного
+                ностальгии, немного гламура и максимум визуального вайба.
+              </p>
+<a class="button button-small" href="#studios">Подробнее</a>
+</div>
+</div>
+</article>
+<article class="slider-slide" data-slide="">
+<div class="feature-grid">
+<div class="feature-image">
+<img alt="Квартира студия" src="pop2.svg"/>
+</div>
+<div class="feature-content">
+<h3>Квартира студия</h3>
+<p>
+                Уютное пространство с винтажной мебелью, мягким светом и
+                домашней атмосферой. Подходит для портретов, lifestyle-съемок
+                и камерных проектов.
+              </p>
+<p>
+                В кадре легко собрать спокойный сюжет, живой интерьер и ощущение
+                теплого ретро-альбома.
+              </p>
+<a class="button button-small" href="#studios">Подробнее</a>
+</div>
+</div>
+</article>
+<article class="slider-slide" data-slide="">
+<div class="feature-grid">
+<div class="feature-image">
+<img alt="Минималистичная студия" src="pop3.svg"/>
+</div>
+<div class="feature-content">
+<h3>Минималистичная студия</h3>
+<p>
+                Светлая студия с чистым фоном, спокойными оттенками и минималистичной
+        мебелью. Пространство хорошо подходит для аккуратных портретов,
+        предметной съемки, lookbook, beauty-контента и лаконичных визуальных
+        историй без лишних деталей. </p>
+<p>Благодаря нейтральной атмосфере, кадры получаются сдержанными, 
+        стильными и выразительными вне зависимости от идеи съемки.
+              </p>
+<a class="button button-small" href="#studios">Подробнее</a>
+</div>
+</div>
+</article>
+</div>
+<div class="slider-controls">
+<button aria-label="Предыдущая студия" class="slider-nav slider-prev" type="button">
+<img alt="" src="hand.svg"/>
+</button>
+<div aria-label="Переключение популярных студий" class="slider-pagination"></div>
+<button aria-label="Следующая студия" class="slider-nav slider-next" type="button">
+<img alt="" src="hand.svg"/>
+</button>
+</div>
+</div>
+</div>
+</section>
+<section class="section studios-section" id="studios">
+<div class="container">
+<h2>Наши студии</h2>
+<div class="studios-grid studios-slider js-slider" data-slider="studios">
+<div class="slider-track studios-track">
+<article class="slider-slide is-active" data-slide="">
+<div class="studios-slide">
+<article class="studios-text-card">
+<h3>Квартира студия</h3>
+<p>
+                Пространство с индустриальным характером, фактурными стенами,
+                высокими потолками и выразительной атмосферой. В оформлении
+                используются кирпичные стены, бетонные или фактурные поверхности,
+                металлические элементы, деревянная мебель и лаконичный декор.
+                Благодаря большому количеству естественного света и открытой
+                планировке студия для портретных съемок.
+              </p>
+</article>
+<div class="studios-main-image">
+<img alt="Интерьер квартиры студии" src="1kvartira.svg"/>
+</div>
+<div class="studios-button-wrap">
+<a class="button studios-button" href="#order">Подробнее</a>
+</div>
+<div class="studio-tile studio-tile-a">
+<img alt="Девушка в студии" src="2kvartira.svg"/>
+</div>
+<div class="studio-tile studio-tile-b">
+<img alt="Портрет у телевизора" src="3kvartira.svg"/>
+</div>
+<div class="studio-tile studio-tile-c">
+<img alt="Зеленая ванная студия" src="4kvartira.svg"/>
+</div>
+</div>
+</article>
+<article class="slider-slide" data-slide="">
+<div class="studios-slide">
+<article class="studios-text-card">
+<h3>Y2K студия</h3>
+<p>
+                Яркая студия в эстетике 2000-х с неоновым светом, винтажными
+                экранами, глянцевыми деталями и дерзким настроением. Пространство
+                подходит для fashion-съемок, клипов, портретов и самого креативного контента. 
+                Помимо характерного освещения, в студии есть множество деталей и реквизита в стиле Y2K,
+                 которые помогают создать кадры с ностальгией и гламуром.
+              </p>
+</article>
+<div class="studios-main-image">
+<img alt="Y2K студия" src="21kvartira.svg"/>
+</div>
+<div class="studios-button-wrap">
+<a class="button studios-button" href="#order">Подробнее</a>
+</div>
+<div class="studio-tile studio-tile-a">
+<img alt="Портрет у телевизора" src="22kvartira.svg"/>
+</div>
+<div class="studio-tile studio-tile-b">
+<img alt="Зеленая студия" src="23kvartira.svg"/>
+</div>
+<div class="studio-tile studio-tile-c">
+<img alt="Девушка в студии" src="24kvartira.svg"/>
+</div>
+</div>
+</article>
+<article class="slider-slide" data-slide="">
+<div class="studios-slide">
+<article class="studios-text-card">
+<h3>Лофт студия</h3>
+<p>
+        Просторная студия с грубыми фактурами, кирпичными стенами,
+        деревянной мебелью и мягким естественным светом. Подходит для
+        портретных съемок вообще любого контента
+        с атмосферой индустриального пространства. Дополнительные детали, как металлические 
+        элементы, винтажные лампы и лаконичный декор, помогают создать кадры с характером и выразительной атмосферой.
+      </p>
+</article>
+<div class="studios-main-image">
+<img alt="Лофт студия" src="31kvartira.svg"/>
+</div>
+<div class="studios-button-wrap">
+<a class="button studios-button" href="#order">Подробнее</a>
+</div>
+<div class="studio-tile studio-tile-a">
+<img alt="Деталь лофт студии" src="32kvartira.svg"/>
+</div>
+<div class="studio-tile studio-tile-b">
+<img alt="Интерьер лофт студии" src="33kvartira.svg"/>
+</div>
+<div class="studio-tile studio-tile-c">
+<img alt="Съемка в лофт студии" src="34kvartira.svg"/>
+</div>
+</div>
+</article>
+<article class="slider-slide" data-slide="">
+<div class="studios-slide">
+<article class="studios-text-card">
+<h3>Минимал студия</h3>
+<p>
+        Светлая студия с чистым фоном, спокойными оттенками и минималистичной
+        мебелью. Пространство хорошо подходит для аккуратных портретов,
+        предметной съемки, lookbook, beauty-контента и лаконичных визуальных
+        историй без лишних деталей. Благодаря нейтральной атмосфере, кадры получаются сдержанными, 
+        стильными и выразительными вне зависимости от идеи съемки.
+      </p>
+</article>
+<div class="studios-main-image">
+<img alt="Минимал студия" src="41kvartira.svg"/>
+</div>
+<div class="studios-button-wrap">
+<a class="button studios-button" href="#order">Подробнее</a>
+</div>
+<div class="studio-tile studio-tile-a">
+<img alt="Деталь минимал студии" src="42kvartira.svg"/>
+</div>
+<div class="studio-tile studio-tile-b">
+<img alt="Интерьер минимал студии" src="43kvartira.svg"/>
+</div>
+<div class="studio-tile studio-tile-c">
+<img alt="Светлая минимал студия" src="44kvartira.svg"/>
+</div>
+</div>
+</article>
+</div>
+<div class="studios-controls">
+<button aria-label="Предыдущая студия" class="slider-nav slider-prev" type="button">
+<img alt="" src="hand.svg"/>
+</button>
+<div aria-label="Переключение студий" class="slider-pagination"></div>
+<button aria-label="Следующая студия" class="slider-nav slider-next" type="button">
+<img alt="" src="hand.svg"/>
+</button>
+</div>
+</div>
+</div>
+</section>
+<section class="section reviews-section" id="reviews">
+<div class="container">
+<h2>Отзывы</h2>
+<div class="grid-slider js-slider" data-slider="reviews">
+<div class="slider-track">
+<article class="slider-slide is-active" data-slide="">
+<div class="review-grid">
+<div class="review-photo">
+<img alt="Портрет клиента" src="1otziv.svg"/>
+</div>
+<div class="review-window">
+<div class="window-bar">
+<span>Review</span>
+<div aria-hidden="true" class="window-controls">
+<span></span>
+<span></span>
+<span></span>
+</div>
+</div>
+<div class="review-body">
+<h3>Анна</h3>
+<p class="review-city">г. Санкт-Петербург</p>
+<p aria-label="5 звезд" class="stars">★ ★ ★ ★ ★</p>
+<p>
+          Бронировала студию для личной фотосессии и осталась очень довольна.
+          Пространство оказалось даже атмосфернее, чем на фотографиях: много
+          интересных деталей, красивый свет и несколько зон, которые можно
+          использовать по-разному. Особенно понравилось, что интерьер не выглядит
+          пустым, и не нужно долго думать,
+          чем заполнить композицию.
+          Администратор помог сориентироваться по локации, подсказал, где лучше
+          поставить свет, и спокойно ответил на все вопросы. Съемка прошла без
+          спешки и лишнего напряжения.
+        </p>
+</div>
+</div>
+</div>
+</article>
+<article class="slider-slide" data-slide="">
+<div class="review-grid">
+<div class="review-photo">
+<img alt="Портрет клиента" src="2otziv.svg"/>
+</div>
+<div class="review-window">
+<div class="window-bar">
+<span>Review</span>
+<div aria-hidden="true" class="window-controls">
+<span></span>
+<span></span>
+<span></span>
+</div>
+</div>
+<div class="review-body">
+<h3>Мира</h3>
+<p class="review-city">г. Москва</p>
+<p aria-label="5 звезд" class="stars">★ ★ ★ ★ ★</p>
+<p>
+          Мы снимали контент для небольшого бренда одежды. Было важно, чтобы локация выглядела трендово, 
+          и здесь как раз получился нужный баланс:
+          фактурные стены, аккуратный декор, мебель, которую легко двигать,
+          и несколько ракурсов для разных образов.
+          Очень понравилось, что в студии достаточно места для команды. Можно
+          спокойно разложить вещи, подготовить образы и не мешать
+          процессу. Свет в помещении мягкий, поэтому даже базовые кадры без
+          сложных настроек выглядели красиво.
+        </p>
+</div>
+</div>
+</div>
+</article>
+<article class="slider-slide" data-slide="">
+<div class="review-grid">
+<div class="review-photo">
+<img alt="Портрет клиента" src="3otziv.svg"/>
+</div>
+<div class="review-window">
+<div class="window-bar">
+<span>Review</span>
+<div aria-hidden="true" class="window-controls">
+<span></span>
+<span></span>
+<span></span>
+</div>
+</div>
+<div class="review-body">
+<h3>Кира</h3>
+<p class="review-city">г. Казань</p>
+<p aria-label="5 звезд" class="stars">★ ★ ★ ★ ★</p>
+<p>
+          Выбирала студию для творческой съемки в необычной стилистике, и эта
+          локация идеально попала в настроение. Здесь получилось забронировать не только помещение, но и камеру!
+          Отдельно хочу отметить удобство бронирования и отношение команды.
+          Перед съемкой помогли уточнить детали, объяснили правила и подсказали,
+          какое время лучше выбрать. На площадке было чисто, спокойно и комфортно.
+          Получился именно тот результат, который я хотела: выразительный, немного
+          кинематографичный и очень атмосферный.
+        </p>
+</div>
+</div>
+</div>
+</article>
+</div>
+<div class="slider-controls reviews-controls">
+<button aria-label="Предыдущий отзыв" class="slider-nav slider-prev" type="button">
+<img alt="" src="hand.svg"/>
+</button>
+<div aria-label="Переключение отзывов" class="slider-pagination"></div>
+<button aria-label="Следующий отзыв" class="slider-nav slider-next" type="button">
+<img alt="" src="hand.svg"/>
+</button>
+</div>
+</div>
+</div>
+</section>
+<section class="order-section" id="order">
+<div class="container">
+<h2>Закажи фотосессию</h2>
+<div class="order-grid">
+<form class="order-form">
+<div class="window-bar">
+<span>Message</span>
+<div class="window-controls">
+<button aria-label="Свернуть" class="win95-btn minimize" type="button"></button>
+<button aria-label="Развернуть" class="win95-btn maximize" type="button"></button>
+<button aria-label="Закрыть" class="win95-btn close" type="button"></button>
+</div>
+</div>
+<label>
+<span>ФИО:</span>
+<input name="name" type="text"/>
+</label>
+<label>
+<span>Телефон:</span>
+<input name="phone" type="tel"/>
+</label>
+<label>
+<span>Почта:</span>
+<input name="email" type="email"/>
+</label>
+<textarea name="message" placeholder="Опишите свой запрос..."></textarea>
+<div class="form-bottom">
+<span aria-hidden="true" class="folder-icon"><img alt="" src="Papka.svg"/></span>
+<button class="button form-submit-button" type="submit">
+<span class="submit-text">Отправить</span>
+<img alt="" class="submit-mail-icon" src="pismo.svg"/>
+</button>
+</div>
+</form>
+<div class="rules">
+<article>
+<h3>1. Что входит в фотосессию?</h3>
+<p>
+               Подберем подходящую студию под ваш образ и идею съемки. Поможем с атмосферой,
+               стилистикой и общим настроением кадров, чтобы результат получился цельным
+               и выразительным.
+              </p>
+</article>
+<article>
+<h3>2. О чем написать</h3>
+<p>
+                Каждая съемка продумывается с учетом ваших пожеланий. Можно выбрать формат,
+                стилистику, референсы и настроение, которое вы хотите передать в кадре.
+                Напишите все, что важно, мы поможем собрать концепцию.
+              </p>
+</article>
+<article>
+<h3>3. После отправки</h3>
+<p>
+                После согласования деталей вышлем всю необходимую информацию о съемке,
+                чтобы подготовиться спокойно и без лишних вопросов.
+              </p>
+</article>
+</div>
+</div>
+</div>
+</section>
+<section class="faq-section">
+<div class="container">
+<h2>Частые вопросы</h2>
+<div class="accordion">
+<details open="">
+<summary>Как забронировать студию или технику?</summary>
+<p>
+              Вы можете оформить бронь несколькими способами: через форму на сайте,
+              написать нам в мессенджеры или соцсети, связаться по телефону.
+              После заявки администратор уточнит дату, время, оборудование и подтвердит бронь.
+            </p>
+</details>
+<details>
+<summary>Сколько человек может находиться в студии?</summary>
+<p>
+              Количество гостей зависит от выбранной студии. Обычно комфортно
+              находиться небольшой команде: фотографу, модели и ассистенту.
+            </p>
+</details>
+<details>
+<summary>Когда нужно приходить?</summary>
+<p>
+              Лучше прийти за 5–10 минут до начала, чтобы спокойно подготовиться
+              и начать съемку вовремя.
+            </p>
+</details>
+<details>
+<summary>Можно ли использовать музыку и громкий звук?</summary>
+<p>
+              Да, музыку можно включать, если это не мешает другим гостям и правилам площадки.
+            </p>
+</details>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="container">
+<div class="footer-inner">
+<div class="footer-column footer-logo-column footer-logo-area">
+<a aria-label="Главная" class="footer-logo" href="#">
+<img alt="Иконка камеры" src="logo.svg"/>
+</a>
+</div>
+<section class="footer-column footer-contacts">
+<h3>Контакты</h3>
+<p>+7 (991) 132-03-04</p>
+<p>+7 (915) 138-42-00</p>
+<h3 style="margin-top: 32px;">Соцсети</h3>
+<p>collage@gmail.ru</p>
+<div class="footer-socials">
+<a aria-label="@tg-chanel" class="social-link" href="https://t.me/yourname">
+<span class="social-icon-wrap">
+<img alt="Telegram" src="tg.png"/>
+</span>
+</a>
+<a aria-label="VK" class="social-link" href="https://vk.com/yourname">
+<span class="social-icon-wrap">
+<img alt="VK" src="vk.png"/>
+</span>
+</a>
+<a aria-label="TikTok" class="social-link" href="https://tiktok.com/@yourname">
+<span class="social-icon-wrap">
+<img alt="TikTok" src="tt.png"/>
+</span>
+</a>
+</div>
+</section>
+<section class="footer-column footer-addresses">
+<h3>Адреса</h3>
+<p>г. Санкт-Петербург, д. Новосаратовка, Покровская дорога, д. 58/2</p>
+<p>г. Санкт-Петербург, ул. Варшавская, 23 к.1</p>
+<p>Ленинградская область</p>
+<p>г. Санкт-Петербург, ул. Новостроек, 13 лит Б</p>
+<p>Ленинградская область, г. Пушкино, ул. Бухарестская улица, 35 к3</p>
+</section>
+<nav class="footer-column footer-nav footer-navigation">
+<h3>Навигация</h3>
+<a href="#">Локации</a>
+<a href="#popular">Ассортименты</a>
+<a href="#">Обработка</a>
+<a href="#">Контакты</a>
+<a class="js-profile-open" href="/fifth screen/index.html">Личный кабинет</a>
+</nav>
+</div>
+<div class="footer-bottom">
+<p>@ 2025 Коллаж | Все права защищены</p>
+<a href="#">Политика конфиденциальности</a>
+</div>
+</div>
+</footer>
+<div aria-hidden="true" class="modal-layer">
+<div aria-labelledby="modal-detail-title" aria-modal="true" class="modal-window modal-detail-window" data-modal="detail" hidden="" role="dialog">
+<header class="modal-window-header">
+<span class="modal-window-name">STUDIO</span>
+<div class="window-controls modal-window-controls">
+<button aria-label="Свернуть" class="win95-btn minimize" type="button"></button>
+<button aria-label="Закрыть" class="win95-btn close js-modal-close" type="button"></button>
+</div>
+</header>
+<div class="modal-detail-body">
+<div class="modal-detail-text">
+<h2 id="modal-detail-title"></h2>
+<p class="modal-detail-description"></p>
+<h3 class="modal-detail-subtitle">Характеристики</h3>
+<div class="modal-detail-features"></div>
+<button class="button js-modal-order" type="button">Заказать</button>
+</div>
+<div class="modal-detail-image">
+<img alt="" src=""/>
+</div>
+</div>
+</div>
+<div aria-labelledby="modal-order-title" aria-modal="true" class="modal-window modal-order-window" data-modal="order" hidden="" role="dialog">
+<header class="modal-window-header">
+<span class="modal-window-name">CART</span>
+<div class="window-controls modal-window-controls">
+<button aria-label="Свернуть" class="win95-btn minimize" type="button"></button>
+<button aria-label="Закрыть" class="win95-btn close js-modal-close" type="button"></button>
+</div>
+</header>
+<form class="modal-order-body">
+<div class="modal-order-left">
+<h2 id="modal-order-title">Заполнение заявки на:</h2>
+<div class="modal-order-list"></div>
+<div class="modal-order-total">
+<strong>Итого:</strong>
+<span class="modal-order-price">0 руб.</span>
+</div>
+<p class="modal-order-note">Предварительная сумма, страховка не включена</p>
+<label class="modal-rules-check">
+<input checked="" type="checkbox"/>
+<span>С правилами пользования и бронирования ознакомлен</span>
+</label>
+</div>
+<div class="modal-order-right">
+<input name="name" placeholder="ФИО:" type="text"/>
+<input name="phone" placeholder="Телефон:" type="tel"/>
+<input name="email" placeholder="Почта:" type="email"/>
+<textarea name="message" placeholder="Опишите свой запрос..."></textarea>
+<div class="modal-order-actions">
+<button class="button js-modal-back" type="button">Назад</button>
+<button class="button js-modal-submit" type="submit">Отправить</button>
+</div>
+</div>
+</form>
+</div>
+<div aria-labelledby="modal-success-title" aria-modal="true" class="modal-window modal-success-window" data-modal="success" hidden="" role="dialog">
+<header class="modal-window-header">
+<span class="modal-window-name">MESSAGE</span>
+<div class="window-controls modal-window-controls">
+<button aria-label="Свернуть" class="win95-btn minimize" type="button"></button>
+<button aria-label="Развернуть" class="win95-btn maximize" type="button"></button>
+<button aria-label="Закрыть" class="win95-btn close js-modal-close" type="button"></button>
+</div>
+</header>
+<div class="modal-success-body">
+
+<div>
+<h2 id="modal-success-title">Сообщение отправлено!</h2>
+<p>Мы скоро с вами свяжемся</p>
+</div>
+
+</div>
+</div>
+</div>
+<div aria-hidden="true" class="profile-modal-layer">
+<div aria-labelledby="profile-window-title" aria-modal="true" class="profile-modal" role="dialog">
+<header class="profile-modal-header">
+<span class="profile-window-title" id="profile-window-title">ENTER</span>
+<div class="profile-window-controls">
+<button aria-label="Свернуть" class="profile-window-btn profile-minimize" type="button"></button>
+<button aria-label="Закрыть" class="profile-window-btn profile-close js-profile-close" type="button"></button>
+</div>
+</header>
+<div class="profile-modal-body">
+<div class="profile-tabs">
+<button class="profile-tab is-active" data-profile-tab="login" type="button">Вход в профиль</button>
+<button class="profile-tab" data-profile-tab="register" type="button">Регистрация</button>
+</div>
+<form class="profile-form is-active" data-profile-form="login">
+<label class="profile-field">
+<input name="phone" placeholder="Телефон:" type="tel"/>
+</label>
+<label class="profile-field">
+<input name="email" placeholder="Почта:" type="email"/>
+</label>
+<label class="profile-field">
+<input name="password" placeholder="Пароль:" type="password"/>
+</label>
+<label class="profile-recovery">
+<input type="checkbox"/>
+<span>Восстановление аккаунта и пароля</span>
+</label>
+<div class="profile-actions">
+<button class="profile-action-button js-profile-close" type="button">Назад</button>
+<button class="profile-action-button" type="submit">Войти</button>
+</div>
+</form>
+<form class="profile-form" data-profile-form="register">
+<label class="profile-field">
+<input name="phone" placeholder="Телефон:" type="tel"/>
+</label>
+<label class="profile-field">
+<input name="email" placeholder="Почта:" type="email"/>
+</label>
+<label class="profile-field">
+<input name="password" placeholder="Пароль:" type="password"/>
+</label>
+<p class="profile-password-hint">
+          Пароль должен содержать: строчные и прописные буквы, цифры и символы.
+        </p>
+<div class="profile-actions">
+<button class="profile-action-button js-profile-close" type="button">Назад</button>
+<button class="profile-action-button" type="submit">Регистрация</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Коллаж</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <a href="/first screen/index.html" class="logo" aria-label="Главная">
+        <img src="logo.svg" alt="Логотип" />
+      </a>
+
+      <button class="burger-btn" type="button" aria-label="Открыть меню" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav">
+        <ul>
+          <li><a href="/fourth screen/index.html">Локации</a></li>
+          <li><a href="/second screen/index.html">Ассортимент</a></li>
+          <li><a href="/third screen/index.html">Обработка</a></li>
+          <li><a class="js-profile-open" href="/fifth screen/index.html">Личный кабинет</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+<section class="hero">
+      <img class="hero-bg" src="mainBackground.svg" alt="" />
+
+      <div class="container hero-inner">
+        <div class="hero-image">
+          <pre class="hero-ascii hero-ascii-left" aria-hidden="true">
+⠀⠀⠀⠀⠀⣠⣤⡦⣤⣬⣍⡉⠒⢤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⣠⠒⠉⠁⠀⠀⠀⠀⠈⠙⠻⣦⣜⠳⣄⢀⣀⣀⣠⣄⣀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣴⡿⠶⣦⡀⠀⠀⠀⠀⠀⠀⠀
+⠀⡜⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢈⢿⡖⠛⣯⠀⠀⣀⣀⣀⣀⡀⠈⠉⠓⠒⠠⠤⣀⣀⠀⠀⠀⠀⠻⠇⠀⢸⡽⠀⠀⠀⠀⠀⠀⠀
+⣼⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠞⠃⣤⣽⣶⠾⣿⠉⠉⠉⠉⠉⠉⠙⠓⢤⡀⠀⠀⠀⠉⠙⠒⠶⢤⣤⣤⡴⠋⠁⠀⠀⠀⠀⠀⠀⠀
+⢿⠀⠀⠀⠀⠀⠀⠀⠀⡠⠊⣠⣶⣿⠋⠉⣏⠀⢹⡀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠣⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠘⣆⢀⣤⡀⠀⠀⠀⡼⢥⣶⠿⠙⠀⠀⠀⡇⠀⢸⡇⠀⠀⠀⠀⢠⣦⣤⠀⠀⠀⢹⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠈⠻⣿⡟⠀⠀⣾⣽⡿⠏⠁⠀⠀⠀⡸⠁⠀⣾⠀⠀⠀⠀⠀⢯⠙⠃⠀⠀⠀⣸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⣑⣿⡟⠃⠀⠀⠀⠀⡴⠁⠀⣰⠏⠃⠀⠀⠀⠀⠘⢦⣄⣀⣠⡴⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⢀⠀⢀⣾⠟⠐⢲⡷⠶⢶⡞⠁⠀⣴⠟⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⢰⢿⡿⣾⡏⠀⠀⠀⠁⢰⠏⠀⢀⡾⡉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠸⣌⢠⡿⠄⠀⢀⣠⡶⠁⠀⡰⠏⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠈⣿⡟⠛⠋⢡⠞⠀⣠⠞⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⢠⡟⠀⠀⢠⠃⠀⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⢸⠇⠀⠀⡏⠀⠀⠀⠀⣴⣗⠲⢤⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⣼⠀⠀⢸⡇⠀⠀⠀⠈⠛⠿⠃⠘⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⣧⠀⠀⠀⢷⡀⠀⠀⠀⠀⠀⢀⡼⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⢸⠀⠀⠀⠈⠻⢶⣤⣤⣤⠶⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠸⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠘⣆⠀⠀⣰⣦⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠉⠳⢤⣽⡿⠙⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+          </pre>
+
+          <img src="mainImage.jpg" alt="Главная фотография" />
+        </div>
+
+        <div class="hero-content">
+          <h1>Коллаж</h1>
+          <p>
+            Наша студия готова подарить вам уникальный опыт фотосъёмки
+            в эстетике разных эпох и стилей.
+          </p>
+          <button type="button"><span>Связаться</span></button>
+
+          <pre class="hero-ascii hero-ascii-right" aria-hidden="true">
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡠⠄⠒⠂⠀⠐⠒⠢⠤⣀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡔⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠑⠢⡀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡌⠀⠀⠠⠀⠀⠀⢄⣀⣤⣶⡶⣶⣦⣤⣈⢆⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⠁⠀⠀⠀⠀⠀⣴⠟⠋⠀⠀⠀⠀⠀⠈⠛⢿⣧⡀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢃⠀⠀⠀⢀⣾⠋⠀⠆⠀⠀⠀⠀⠀⠀⠀⠀⠙⣿⣄⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠓⠄⣀⣸⣇⠀⠊⠀⠀⠀⠀⠒⢄⠀⠀⠀⠀⡟⣿⡆
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⡆⠀⠀⠀⡇⢹⡇
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡀⠀⠀⠀⠀⠀⡔⠊⠉⠉⠒⣄⠀⠻⣄⠀⠀⠀⠀⠀⠀⢠⠃⠀⠀⡰⠁⣼⡇
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣦⢹⠇⣴⣾⠇⠀⢸⠀⠀⠰⣦⠀⠈⡆⠀⠉⠳⠤⡤⠤⠤⠖⠁⠀⠀⡐⠁⢀⣿⠃
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡾⢃⠁⣚⣭⣤⡀⠀⠀⠳⢤⡴⠟⠀⢀⠇⢀⣀⣰⣾⣶⠀⠀⠀⢀⡠⠊⠀⣠⣿⠋⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⡆⠀⣀⠰⠂⠓⠉⠉⠉⠉⠁⠀⠀⠀⠀⣀⠀⣴⡋⣠⣿⣿⡿⠟⠉⢀⠠⠂⠁⢀⣠⣾⠟⠁⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣷⣿⡿⠏⠒⣉⣤⣤⣤⣶⣶⣦⣭⣭⣭⣭⣉⣁⣀⣒⣛⣛⣛⡉⣭⣀⣀⣂⣉⣤⣤⣶⡾⠟⠋⠁⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢀⣴⣿⡿⢛⣩⡴⠾⠛⢉⡉⠭⠬⠥⠭⠬⠥⣉⣉⡉⠉⠉⠛⠛⠛⠻⠿⢿⣿⣿⣿⣿⣿⣿⣿⣶⣦⣤⡀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⢠⣾⠟⣩⡶⠛⣁⣤⣴⣮⣯⣴⣤⣬⣍⠂⢤⡀⢠⣀⠉⣙⣓⠦⣄⡀⠀⠀⠀⠈⠙⢿⣿⠙⣿⣿⣿⣿⣿⣿⡆⠀⠀⠀⠀
+⠀⠀⠀⠀⣰⡿⣩⡾⠋⣠⡾⠛⠉⠁⠀⠀⠀⠀⠈⠙⢿⣦⡈⢦⠙⣿⣮⡛⠀⠀⠙⢶⡀⠀⠀⠀⠀⠀⠀⠈⠉⠀⠙⠿⠛⠀⠀⠀⠀⠀
+⠀⠀⠀⣰⢟⡴⠋⣠⠞⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⣿⡄⢳⠀⠇⠰⣦⠀⠹⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⣰⣿⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢣⠀⠀⠙⣿⣿⠀⡾⢃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⢳⠸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠑⠤⢀⠠⠊⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+          </pre>
+        </div>
+      </div>
+    </section>
+<section class="popular-models" id="models">
+      <div class="container">
+        <h2>Популярные модели</h2>
+
+        <div class="models-slider-wrap">
+          <div class="swiper models-slider">
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide">
+                <article class="model-card">
+                  <header class="card-header">
+                    <h4>CANON EOS 5D</h4>
+                    <div class="window-controls">
+                      <button class="win95-btn minimize" aria-label="Свернуть" type="button"></button>
+                      <button class="win95-btn maximize" aria-label="Развернуть" type="button"></button>
+                      <button class="win95-btn close" aria-label="Закрыть" type="button"></button>
+                    </div>
+                  </header>
+
+                  <div class="card-image">
+                    <img src="leftcamera.svg" alt="Canon EOS 5D" />
+                  </div>
+
+                  <button type="button" class="model-more-btn">Подробнее</button>
+                </article>
+              </div>
+
+              <div class="swiper-slide">
+                <article class="model-card">
+                  <header class="card-header">
+                    <h4>CANON EOS M10</h4>
+                    <div class="window-controls">
+                      <button class="win95-btn minimize" aria-label="Свернуть" type="button"></button>
+                      <button class="win95-btn maximize" aria-label="Развернуть" type="button"></button>
+                      <button class="win95-btn close" aria-label="Закрыть" type="button"></button>
+                    </div>
+                  </header>
+
+                  <div class="card-image">
+                    <img src="maincamera.svg" alt="Canon EOS M10" />
+                  </div>
+
+                  <button type="button" class="model-more-btn">Подробнее</button>
+                </article>
+              </div>
+
+              <div class="swiper-slide">
+                <article class="model-card">
+                  <header class="card-header">
+                    <h4>KODAK PIXPRO FZ55</h4>
+                    <div class="window-controls">
+                      <button class="win95-btn minimize" aria-label="Свернуть" type="button"></button>
+                      <button class="win95-btn maximize" aria-label="Развернуть" type="button"></button>
+                      <button class="win95-btn close" aria-label="Закрыть" type="button"></button>
+                    </div>
+                  </header>
+
+                  <div class="card-image">
+                    <img src="rightcamera.svg" alt="Kodak Pixpro FZ55" />
+                  </div>
+
+                  <button type="button" class="model-more-btn">Подробнее</button>
+                </article>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="models-slider-controls">
+          <button class="models-nav models-prev" type="button" aria-label="Предыдущий слайд">
+            <img src="hand.svg" alt="" />
+          </button>
+
+          <div class="models-pagination">
+            <button class="models-bullet is-active" type="button" data-slide="0" aria-label="Слайд 1"></button>
+            <button class="models-bullet" type="button" data-slide="1" aria-label="Слайд 2"></button>
+            <button class="models-bullet" type="button" data-slide="2" aria-label="Слайд 3"></button>
+          </div>
+
+          <button class="models-nav models-next" type="button" aria-label="Следующий слайд">
+            <img src="hand.svg" alt="" />
+          </button>
+        </div>
+      </div>
+    </section>
+<section class="best-locations" id="locations">
+      <div class="container">
+        <h2>Лучшие локации</h2>
+
+        <div class="location-list">
+
+          <article class="location-card">
+            <header class="card-header">
+              <h4>Y2K</h4>
+              <div class="window-controls">
+                <button class="win95-btn minimize" aria-label="Свернуть" type="button"></button>
+                <button class="win95-btn maximize" aria-label="Развернуть" type="button"></button>
+                <button class="win95-btn close" aria-label="Закрыть" type="button"></button>
+              </div>
+            </header>
+
+            <div class="location-body">
+              <div class="location-text">
+                <h3>Y2K студия</h3>
+                <p>
+                  Яркая и дерзкая студия в эстетике 2000-х, где сочетаются глянец, блеск,
+                  неон и настроение гранжевой поп-культуры. <br>
+                  Это пространство идеально подойдет для
+                  стильных индивидуальных съемок, контент-съемки, клипов и смелых creative-проектов.
+                  Немного ностальгии, немного гламура и максимум визуального вайба.
+                </p>
+                <button type="button">Подробнее</button>
+                <img class="location-decor" src="y2k-decor.svg" alt="" />
+              </div>
+
+              <div class="location-image">
+                <img src="wasingmachine.svg" alt="Y2K студия" />
+              </div>
+            </div>
+          </article>
+
+          <article class="location-card">
+            <header class="card-header">
+              <h4>Home</h4>
+              <div class="window-controls">
+                <button class="win95-btn minimize" aria-label="Свернуть" type="button"></button>
+                <button class="win95-btn maximize" aria-label="Развернуть" type="button"></button>
+                <button class="win95-btn close" aria-label="Закрыть" type="button"></button>
+              </div>
+            </header>
+
+            <div class="location-body location-body-reverse">
+              <div class="location-image">
+                <img src="girlonSofa.svg" alt="Домашняя студия" />
+              </div>
+
+              <div class="location-text">
+                <h3>Домашняя студия</h3>
+                <p>
+                  Уютная студия с тёплой атмосферой, созданная для семейных фотосессий,
+                  съёмок с детьми и нежных памятных кадров. Мягкий свет, комфортное
+                  пространство и спокойное оформление подходят для живых моментов
+                  и фотографий, которые хочется пересматривать снова и снова.
+                </p>
+                <button type="button">Подробнее</button>
+                <img class="location-decor" src="home-decor.svg" alt="" />
+              </div>
+            </div>
+          </article>
+
+          <article class="location-card location-card-last">
+            <header class="card-header">
+              <h4>CYBERPUNK</h4>
+              <div class="window-controls">
+                <button class="win95-btn minimize" aria-label="Свернуть" type="button"></button>
+                <button class="win95-btn maximize" aria-label="Развернуть" type="button"></button>
+                <button class="win95-btn close" aria-label="Закрыть" type="button"></button>
+              </div>
+            </header>
+
+            <div class="location-body">
+              <div class="location-text">
+                <h3>Киберпанк студия</h3>
+                <p>
+                  Эффектная студия с футуристической атмосферой, неоновым светом
+                  и настроением цифрового мегаполиса будущего. Это пространство
+                  отлично подойдёт для уникальной фотосъёмки, выразительных образов
+                  и кинематографичных кадров с ощущением драйва и технологичного мира.
+                </p>
+                <button type="button">Подробнее</button>
+                <img class="location-decor" src="cyberpunk-decor.svg" alt="" />
+              </div>
+
+              <div class="location-image">
+                <img src="ergoproxi.svg" alt="Киберпанк студия" />
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+<section class="opportunities" id="opportunities">
+      <div class="container">
+        <h2>Наши возможности</h2>
+
+        <div class="swiper opportunities-slider">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="opportunities-inner">
+                <div class="opportunities-text">
+                  <h3>Фото ретушь</h3>
+                  <p>
+                    Мы работаем с цветокоррекцией, светом, тоном кожи, деталями изображения
+                    и общим визуальным стилем фотографии по вашему запросу. Эта услуга
+                    отлично подходит для портретных, семейных, студийных и коммерческих
+                    съёмок, когда хочется получить по-настоящему завершённый результат.
+                    Результат может быть как естественным, так и стилизованным, в зависимости от ваших пожеланий
+                    и концепции съёмки.
+                  </p>
+                  <button type="button">Подробнее</button>
+                </div>
+
+                <div class="opportunities-image">
+                  <img src="japane6.svg" alt="Фото ретушь" />
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="opportunities-inner">
+                <div class="opportunities-text">
+                  <h3>Восстановление фото</h3>
+                  <p>
+                    Помогаем восстановить старые и повреждённые снимки: убираем царапины,
+                    пыль, заломы, корректируем цвет и возвращаем фотографиям аккуратный
+                    и выразительный вид. Мы бережно восстанавливаем важные моменты и сохраняем память в лучшем виде.
+                    Подходит для семейных архивов, исторических фотографий и любых снимков, которые вы хотите сохранить и оживить.
+                  </p>
+                  <button type="button">Подробнее</button>
+                </div>
+
+                <div class="opportunities-image">
+                  <img src="restovration.svg" alt="Восстановление фото" />
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="opportunities-inner">
+                <div class="opportunities-text">
+                  <h3>Создание веб-архива</h3>
+                  <p>
+                    Мы создаём удобные и красивые онлайн-архивы для ваших фотографий, которые можно просматривать,
+                    делиться и хранить в цифровом формате. Это отличный способ сохранить воспоминания, организовать
+                    семейные фотоальбомы или создать портфолио для профессиональных фотографов. Ваши снимки будут доступны
+                    в любое время и с любого устройства, а также защищены от потери и повреждений.
+                  </p>
+                  <button type="button">Подробнее</button>
+                </div>
+
+                <div class="opportunities-image">
+                  <img src="webarchive.svg" alt="Создание веб-архива" />
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="models-slider-controls opportunities-controls">
+          <button class="models-nav opportunities-prev" type="button" aria-label="Предыдущий слайд">
+            <img src="hand.svg" alt="" />
+          </button>
+
+          <div class="opportunities-pagination"></div>
+
+          <button class="models-nav opportunities-next" type="button" aria-label="Следующий слайд">
+            <img src="hand.svg" alt="" />
+          </button>
+        </div>
+      </div>
+    </section>
+<section class="contacts" id="contacts">
+      <div class="container">
+        <h2>Контакты</h2>
+
+        <div class="contacts-inner">
+          <div class="contacts-text">
+
+            <div class="contacts-block">
+              <h3>Адреса</h3>
+              <p>г. Санкт-Петербург, ул. Примерная, д. 58/2</p>
+              <p>г. Санкт-Петербург, ул. Варшавская, д. 23, к. 1</p>
+              <p>г. Санкт-Петербург, ул. Новостроек, д. 13, лит. Б</p>
+              <p>Ленинградская область, г. Пушкин, ул. Бухарестская, д. 35, к. 3</p>
+              <p class="contacts-worktime"><b>Время работы:</b> с 9:00 до 22:00</p>
+            </div>
+
+            <div class="contacts-block contacts-block-large-gap">
+              <h3>Контакты</h3>
+              <p>Телефон: +7 (812) 123-45-67</p>
+              <p>Телефон: +7 (915) 138-42-00</p>
+              <p class="contacts-email">Email: collage@gmail.ru</p>
+
+              <div class="socials">
+                <a href="#" class="social-link" aria-label="Telegram" target="_blank" rel="noopener noreferrer">
+                  <span class="social-icon-wrap">
+                    <img src="tg.png" alt="Telegram">
+                  </span>
+                </a>
+
+                <a href="#" class="social-link" aria-label="TT" target="_blank" rel="noopener noreferrer">
+                  <span class="social-icon-wrap">
+                    <img src="tt.png" alt="TT">
+                  </span>
+                </a>
+
+                <a href="#" class="social-link" aria-label="VK" target="_blank" rel="noopener noreferrer">
+                  <span class="social-icon-wrap">
+                    <img src="vk.png" alt="VK">
+                  </span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="contacts-map">
+            <div id="map"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+<section class="questions">
+      <div class="container">
+        <h2>Частые вопросы</h2>
+
+        <div class="accordion">
+          <details>
+            <summary>Как забронировать студию или технику?</summary>
+            <p>
+              Вы можете оформить бронь несколькими способами: через форму на сайте,
+              написать нам в мессенджеры или соцсети, либо связаться по телефону.
+              После заявки администратор связывается с вами, уточняет детали съёмки
+              и подтверждает бронь. После этого вам приходит письмо или сообщение
+              с подтверждением.
+            </p>
+          </details>
+
+          <details>
+            <summary>Можно ли арендовать фотоаппарат отдельно от студии?</summary>
+            <p>
+              Да, вы можете арендовать технику отдельно. Администратор уточнит модель,
+              дату, время аренды и условия возврата оборудования.
+            </p>
+          </details>
+
+          <details>
+            <summary>Можно ли заказать обработку уже готовых фотографий?</summary>
+            <p>
+              Да, вы можете отправить готовые фотографии на ретушь, цветокоррекцию
+              или стилизацию. Сроки зависят от количества снимков и сложности обработки.
+            </p>
+          </details>
+
+          <details>
+            <summary>Как подтверждается бронь?</summary>
+            <p>
+              После оформления заявки администратор связывается с вами, уточняет детали
+              и отправляет подтверждение бронирования по почте или в мессенджере.
+            </p>
+          </details>
+
+          <details>
+            <summary>Можно ли отменить или перенести бронь?</summary>
+            <p>
+              Да, перенос или отмена возможны. Условия зависят от времени до начала
+              бронирования и выбранной услуги.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+
+      <div class="footer-inner">
+
+        <div class="footer-column footer-logo-column">
+          <a href="#" class="footer-logo" aria-label="Главная">
+            <img src="logo.svg" alt="Иконка камеры">
+          </a>
+        </div>
+
+        <section class="footer-column">
+          <h3>Контакты</h3>
+          <p>+7 (991) 132-03-04</p>
+          <p>+7 (915) 138-42-00</p>
+
+          <h3 class="footer-social-title">Соцсети</h3>
+          <p>collage@gmail.ru</p>
+
+          <div class="footer-socials">
+            <a href="#" class="social-link" aria-label="Telegram">
+              <span class="social-icon-wrap">
+                <img src="tg.png" alt="Telegram">
+              </span>
+            </a>
+
+            <a href="#" class="social-link" aria-label="VK">
+              <span class="social-icon-wrap">
+                <img src="vk.png" alt="VK">
+              </span>
+            </a>
+
+            <a href="#" class="social-link" aria-label="Instagram">
+              <span class="social-icon-wrap">
+                <img src="tt.png" alt="Instagram">
+              </span>
+            </a>
+          </div>
+        </section>
+
+        <section class="footer-column">
+          <h3>Адреса</h3>
+          <p>г. Санкт-Петербург, д. Новосаратовка, Покровская дорога, д. 58/2</p>
+          <p>г. Санкт-Петербург, ул. Варшавская, 23 к.1</p>
+          <p>Ленинградская область</p>
+          <p>г. Санкт-Петербург, ул. Новостроек, 13 лит Б</p>
+          <p>Ленинградская область, г. Пушкино, ул. Бухарестская улица, 35 к3</p>
+        </section>
+
+        <nav class="footer-column footer-nav">
+          <h3>Навигация</h3>
+          <a href="/fourth screen/index.html">Локации</a>
+          <a href="/second screen/index.html">Ассортименты</a>
+          <a href="/third screen/index.html">Обработка</a>
+          <a href="#contacts">Контакты</a>
+          <a class="js-profile-open" href="/fifth screen/index.html">Личный кабинет</a>
+        </nav>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>@ 2025 Коллаж | Все права защищены</p>
+        <a href="#">Политика конфиденциальности</a>
+      </div>
+
+    </div>
+  </footer>
+<div class="modal-layer" aria-hidden="true">
+    <div class="modal-window modal-detail-window" data-modal="detail" role="dialog" aria-modal="true" aria-labelledby="modal-detail-title" hidden>
+      <header class="modal-window-header">
+        <span class="modal-window-name">CAMERA</span>
+        <div class="window-controls modal-window-controls">
+          <button class="win95-btn minimize" type="button" aria-label="Свернуть"></button>
+          <button class="win95-btn close js-modal-close" type="button" aria-label="Закрыть"></button>
+        </div>
+      </header>
+
+      <div class="modal-detail-body">
+        <div class="modal-detail-text">
+          <h2 id="modal-detail-title"></h2>
+          <p class="modal-detail-description"></p>
+
+          <h3 class="modal-detail-subtitle">Характеристики</h3>
+          <div class="modal-detail-features"></div>
+
+          <button class="js-modal-order" type="button">Заказать</button>
+        </div>
+
+        <div class="modal-detail-image">
+          <img src="" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-window modal-order-window" data-modal="order" role="dialog" aria-modal="true" aria-labelledby="modal-order-title" hidden>
+      <header class="modal-window-header">
+        <span class="modal-window-name">CART</span>
+        <div class="window-controls modal-window-controls">
+          <button class="win95-btn minimize" type="button" aria-label="Свернуть"></button>
+          <button class="win95-btn close js-modal-close" type="button" aria-label="Закрыть"></button>
+        </div>
+      </header>
+
+      <form class="modal-order-body">
+        <div class="modal-order-left">
+          <h2 id="modal-order-title">Заполнение заявки на:</h2>
+
+          <div class="modal-order-list"></div>
+
+          <div class="modal-order-total">
+            <strong>Итого:</strong>
+            <span class="modal-order-price">1960 руб.</span>
+          </div>
+          <p class="modal-order-note">Предварительная сумма, страховка не включена</p>
+
+          <label class="modal-rules-check">
+            <input type="checkbox" checked />
+            <span>С правилами пользования и бронирования ознакомлен</span>
+          </label>
+        </div>
+
+        <div class="modal-order-right">
+          <input type="text" name="name" placeholder="ФИО:" />
+          <input type="tel" name="phone" placeholder="Телефон:" />
+          <input type="email" name="email" placeholder="Почта:" />
+          <textarea name="message" placeholder="Опишите свой запрос..."></textarea>
+
+          <div class="modal-order-actions">
+            <button class="js-modal-back" type="button">Назад</button>
+            <button class="js-modal-submit" type="submit">Отправить</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="modal-window modal-success-window" data-modal="success" role="dialog" aria-modal="true" aria-labelledby="modal-success-title" hidden>
+      <header class="modal-window-header">
+        <span class="modal-window-name">MESSAGE</span>
+        <div class="window-controls modal-window-controls">
+          <button class="win95-btn minimize" type="button" aria-label="Свернуть"></button>
+          <button class="win95-btn maximize" type="button" aria-label="Развернуть"></button>
+          <button class="win95-btn close js-modal-close" type="button" aria-label="Закрыть"></button>
+        </div>
+      </header>
+
+      <div class="modal-success-body">
+        <div>
+          <h2 id="modal-success-title">Сообщение отправлено!</h2>
+          <p>Мы скоро с вами свяжемся</p>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="profile-modal-layer" aria-hidden="true">
+  <div class="profile-modal" role="dialog" aria-modal="true" aria-labelledby="profile-window-title">
+    <header class="profile-modal-header">
+      <span id="profile-window-title" class="profile-window-title">ENTER</span>
+
+      <div class="profile-window-controls">
+        <button class="profile-window-btn profile-minimize" type="button" aria-label="Свернуть"></button>
+        <button class="profile-window-btn profile-close js-profile-close" type="button" aria-label="Закрыть"></button>
+      </div>
+    </header>
+
+    <div class="profile-modal-body">
+
+      <div class="profile-tabs">
+        <button class="profile-tab is-active" type="button" data-profile-tab="login">Вход в профиль</button>
+        <button class="profile-tab" type="button" data-profile-tab="register">Регистрация</button>
+      </div>
+
+      <form class="profile-form is-active" data-profile-form="login">
+        <label class="profile-field">
+          <input type="tel" name="phone" placeholder="Телефон:" />
+        </label>
+
+        <label class="profile-field">
+          <input type="email" name="email" placeholder="Почта:" />
+        </label>
+
+        <label class="profile-field">
+          <input type="password" name="password" placeholder="Пароль:" />
+        </label>
+
+        <label class="profile-recovery">
+          <input type="checkbox" />
+          <span>Восстановление аккаунта и пароля</span>
+        </label>
+
+        <div class="profile-actions">
+          <button class="profile-action-button js-profile-close" type="button">Назад</button>
+          <button class="profile-action-button" type="submit">Войти</button>
+        </div>
+      </form>
+
+      <form class="profile-form" data-profile-form="register">
+        <label class="profile-field">
+          <input type="tel" name="phone" placeholder="Телефон:" />
+        </label>
+
+        <label class="profile-field">
+          <input type="email" name="email" placeholder="Почта:" />
+        </label>
+
+        <label class="profile-field">
+          <input type="password" name="password" placeholder="Пароль:" />
+        </label>
+
+        <p class="profile-password-hint">
+          Пароль должен содержать: строчные и прописные буквы, цифры и символы.
+        </p>
+
+        <div class="profile-actions">
+          <button class="profile-action-button js-profile-close" type="button">Назад</button>
+          <button class="profile-action-button" type="submit">Регистрация</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+  <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB35RYhzquykRHNW7lY6wqaWC76gafK2VI&loading=async&callback=initMap&v=weekly"></script>
+</body>
+</html>
