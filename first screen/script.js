@@ -297,7 +297,7 @@ function initProfileModal() {
   const forms = Array.from(modalLayer.querySelectorAll(".profile-form"));
   const closeButtons = modalLayer.querySelectorAll(".js-profile-close");
 
-  let profileUrl = "/SiteDesign2026/fifth%20screen/index.html";
+  let profileUrl = "../fifth%20screen/index.html";
 
   profileLinks.forEach(function (link) {
     link.addEventListener("click", function (event) {
